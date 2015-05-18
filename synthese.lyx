@@ -1,0 +1,964 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+SINF1250 - Mathématiques pour l'informatique
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Logiques et preuves
+\end_layout
+
+\begin_layout Section
+Logique propositionnelle
+\end_layout
+
+\begin_layout Subsection
+Propositions
+\end_layout
+
+\begin_layout Definition
+Proposition : phrase déclarative qui est soit vraie, soit fausse.
+\end_layout
+
+\begin_layout Definition
+La proposition qui est toujours vraie se note T, celle qui est toujours
+ fausse se note F.
+\end_layout
+
+\begin_layout Subsection
+Connecteurs
+\end_layout
+
+\begin_layout Standard
+Il y a moyen de composer des propositions grâce aux opérateurs :
+\end_layout
+
+\begin_layout Itemize
+¬ (négation) ;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\wedge$
+\end_inset
+
+ (conjonction) ;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\vee$
+\end_inset
+
+ (disjonction) ;
+\end_layout
+
+\begin_layout Itemize
+→ (implication) : p → q se lit 
+\begin_inset Quotes eld
+\end_inset
+
+si p, alors q
+\begin_inset Quotes erd
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+↔ (biconditionnelle) : p ↔ p se lit 
+\begin_inset Quotes eld
+\end_inset
+
+p si et seulement si q
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Une condition nécessaire quand p est q ;
+\end_layout
+
+\begin_layout Itemize
+Une condition suffisante pour q est p.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Tables de vérité
+\end_layout
+
+\begin_layout Standard
+Les tables de vérité se composent de :
+\end_layout
+
+\begin_layout Itemize
+lignes qui représentent chaque possibilité de combinaison de valeurs pour
+ les propositions atomiques ;
+\end_layout
+
+\begin_layout Itemize
+colonnes qui représentent la valeur de vérité de chaque proposition atomique,
+ puis la valeur de la proposition composée.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p↔q
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Table de vérité de la biconditionnelle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Propositions équivalentes
+\end_layout
+
+\begin_layout Definition
+Deux propositions sont équivalentes si elles ont toujours la même valeur
+ de vérité.
+\end_layout
+
+\begin_layout Section
+Equivalences logiques
+\end_layout
+
+\begin_layout Subsection
+Tautologies, contradictions & contingences 
+\end_layout
+
+\begin_layout Definition
+Une tautologie est une proposition qui est toujours vraie.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Une contradiction est une proposition qui est toujours fausse.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Une contingence est une proposition qui n'est ni une tautologie ni une contradic
+tion.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Equivalence logique
+\end_layout
+
+\begin_layout Definition
+Deux propositions sont logiquement équivalentes si p↔q est une tautologie.
+ Cela se note p
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+q ou p≡q.
+\end_layout
+
+\begin_layout Subsubsection*
+Lois de 
+\emph on
+De Morgan
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\neg(p\wedge q)\equiv\neg p\vee\neg q
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\neg(p\vee q)\equiv\neg p\wedge\neg q
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ces propositions sont facilement vérifiables en utilisant des tables de
+ vérité.
+\end_layout
+
+\begin_layout Subsubsection*
+Equivalences logiques clés
+\end_layout
+
+\begin_layout Itemize
+Lois d'identité : 
+\begin_inset Formula $p\wedge T=p$
+\end_inset
+
+,
+\begin_inset space \space{}
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $p\vee F=p$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+Lois de domination : 
+\begin_inset Formula $p\vee T=T$
+\end_inset
+
+, 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $p\wedge F=F$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+Lois d'impotence : 
+\begin_inset Formula $p\vee p=p$
+\end_inset
+
+,
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+ 
+\begin_inset Formula $p\wedge p=p$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+Loi de double négation : 
+\begin_inset Formula $\neg(\neg p)\equiv p$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+Lois de négation : 
+\begin_inset Formula $p\vee\neg p\equiv T$
+\end_inset
+
+,
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $p\wedge\neg p\equiv F$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+Lois commutatives : 
+\begin_inset Formula $p\vee q\equiv q\vee p$
+\end_inset
+
+,
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $p\wedge q\equiv q\equiv p$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+Lois associatives : 
+\begin_inset Formula $(p\wedge q)\wedge r\equiv p\wedge(q\wedge r)$
+\end_inset
+
+,
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $(p\vee q)\vee r\equiv p\vee(q\vee r)$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+Lois distributives : 
+\begin_inset Formula $(p\vee(q\wedge r))\equiv(p\vee q)\wedge(p\vee r)$
+\end_inset
+
+,
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $(p\wedge(q\vee r))\equiv(p\wedge q)\vee(p\wedge r)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Lois d'absorption : 
+\begin_inset Formula $p\vee(p\wedge q)\equiv p$
+\end_inset
+
+,
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $p\wedge(p\vee q)\equiv p$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+Des équivalences moins fréquentes se trouvent au slide 48.
+ Des preuves d'équivalence y sont aussi décrites.
+\end_layout
+
+\begin_layout Subsection
+Forme normale
+\end_layout
+
+\begin_layout Definition
+Une proposition est dans sa forme normale disjonctive si elle consiste en
+ (1...n) disjonctions où chaque disjonction est une conjonction de (1...m) formules
+ atomiques ou de négations de formules atomiques
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(\neg p\wedge q)\vee(p\wedge\neg q)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Une proposition est dans sa forme nomarle conjonctive si c'est une conjonction
+ de disjonctions.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(p\vee\neg r)\wedge(\neg q\vee p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Toutes les propositions peuvent être réécrites sous leurs formes normales
+ conjonctive et disjonctive.
+\end_layout
+
+\begin_layout Subsection
+Satisfiabilité compositionnelle
+\end_layout
+
+\begin_layout Definition
+une proposition composée est satisfaisable si il existe une assignation
+ de valeurs de vérité à ses variables telles que la proposition est vraie.
+ Dans le cas contraire, on parle de proposition non-satisfaisable.
+\end_layout
+
+\begin_layout Notation*
+On écrit 
+\begin_inset Formula $\bigvee_{j=1}^{n}$
+\end_inset
+
+pour signifier 
+\begin_inset Formula $p_{1}\vee p_{2}\vee...\vee p_{n}$
+\end_inset
+
+ et 
+\begin_inset Formula $\bigwedge_{j=1}^{n}$
+\end_inset
+
+pour signifier 
+\begin_inset Formula $p_{1}\wedge p_{2}\wedge...\wedge p_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Prédicats et quantificateurs
+\end_layout
+
+\begin_layout Subsection
+Prédicats
+\end_layout
+
+\begin_layout Standard
+La logique des prédicats introduit des nouvelles caractéristiques :
+\end_layout
+
+\begin_layout Itemize
+les variables : x, y, z ;
+\end_layout
+
+\begin_layout Itemize
+les prédicats : P(x), M(x) ;
+\end_layout
+
+\begin_layout Itemize
+les quantificateurs : 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+universel : 
+\begin_inset Formula $\forall$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+existentiel : 
+\begin_inset Formula $\exists$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Les fonctions propositionnelles sont une généralisation des propositions.
+ Elles contiennent des variables et des prédicats.
+ Ces variables peuvent être remplacées par des éléments de leur domaine.
+\end_layout
+
+\begin_layout Standard
+Elles deviennent des propositions lorsque leurs variables sont remplacées
+ par des valeurs, ou liées par un quantificateur.
+ 
+\end_layout
+
+\begin_layout Example*
+P(x) signifie 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $x>0$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Le domaine de x est constitué des entiers.
+ Alors,
+\end_layout
+
+\begin_layout Itemize
+P(-3) est faux ;
+\end_layout
+
+\begin_layout Itemize
+P(0) est faux ;
+\end_layout
+
+\begin_layout Itemize
+P(3) est vrai.
+\end_layout
+
+\begin_layout Notation*
+On note le domaine d'un variable par U.
+\end_layout
+
+\begin_layout Standard
+On peut composer des propositions basée sur des prédicats.
+\end_layout
+
+\begin_layout Example*
+Si P(x) signifie 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $x>0$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, alors la proposition 
+\begin_inset Formula $P(3)\vee P(-1)$
+\end_inset
+
+ est vraie.
+\end_layout
+
+\begin_layout Subsection
+Quantificateurs
+\end_layout
+
+\begin_layout Standard
+Les deux quantificateurs les plus importants sont le quantificateur universel
+ (
+\begin_inset Formula $\forall$
+\end_inset
+
+) et le quantificateur existentiel (
+\begin_inset Formula $\exists$
+\end_inset
+
+).
+ Ceux-ci ont une priorité plus haute que toutes les autres opérateurs logiques.
+\end_layout
+
+\begin_layout Notation*
+\begin_inset Formula $\forall x\, P(x)$
+\end_inset
+
+ signifie que 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est vrai pour tout x dans le domaine.
+ 
+\begin_inset Formula $\exists x\, P(x)$
+\end_inset
+
+ signifie que 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est vrai pour certains x dans le domaine.
+\end_layout
+
+\begin_layout Standard
+On dit que les quantificateurs lient la variable x dans ces expressions.
+\end_layout
+
+\begin_layout Standard
+Un troisième quantificateur signifie que 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ n'est vrai que pour un et un seul x dans le domaine.
+ Il s'agit de 
+\begin_inset Formula $\exists!x\, P(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Equivalence en logique des prédicats
+\end_layout
+
+\begin_layout Definition
+Deux déclarations impliquant des prédicats et des quantificateurs sont logiqueme
+nt équivalentes si elles ont la même valeur de vérité pour chaque prédicat
+ substitué dans ces déclarations, et pour chaque domaine utilisé pour les
+ variables.
+\end_layout
+
+\begin_layout Standard
+Si le domaine est fini, une proposition universellement quantifiée est équivalen
+te à une conjonction de propositions sans quantificateur, et une proposition
+ existentiellement quantifiée est équivalente à une disjonction de propositions
+ sans quantificateur.
+\end_layout
+
+\begin_layout Example*
+Si U = {1, 2, 3}, alors 
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\[
+\forall x\, P(x)\equiv P(1)\wedge P(2)\wedge P(3)\equiv\bigwedge_{x\in U}P(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\[
+\exists x\, P(x)\equiv P(1)\vee P(2)\vee P(3)\equiv\bigvee_{x\in U}P(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Négation d'expressions quantifiées / lois de 
+\emph on
+De Morgan
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\neg\forall x\, P(x)\equiv\exists x\,\neg P(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\neg\exists x\, P(x)\equiv\forall x\,\neg P(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quantificateurs imbriqués
+\end_layout
+
+\end_body
+\end_document
