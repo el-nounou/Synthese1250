@@ -654,40 +654,6 @@ Des équivalences moins fréquentes se trouvent au slide 48.
 \end_layout
 
 \begin_layout Subsection
-Forme normale
-\end_layout
-
-\begin_layout Definition
-Une proposition est dans sa forme normale disjonctive si elle consiste en
- (1...n) disjonctions où chaque disjonction est une conjonction de (1...m) formules
- atomiques ou de négations de formules atomiques
-\end_layout
-
-\begin_layout Example*
-\begin_inset Formula $(\neg p\wedge q)\vee(p\wedge\neg q)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-Une proposition est dans sa forme nomarle conjonctive si c'est une conjonction
- de disjonctions.
-\end_layout
-
-\begin_layout Example*
-\begin_inset Formula $(p\vee\neg r)\wedge(\neg q\vee p)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Toutes les propositions peuvent être réécrites sous leurs formes normales
- conjonctive et disjonctive.
-\end_layout
-
-\begin_layout Subsection
 Satisfiabilité compositionnelle
 \end_layout
 
@@ -1704,6 +1670,1057 @@ Cet argument correspond à la tautologie
 
 \begin_layout Subsubsection*
 Syllogisme disjonctif
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\neg p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cet argument correspond à la tautologie 
+\begin_inset Formula $(\neg p\wedge(p\vee q))\rightarrow q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Addition
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore p\vee q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cet argument correspond à la tautologie 
+\begin_inset Formula $p\rightarrow(p\vee q)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Simplification
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $p\wedge q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cet argument correspond à la tautologie 
+\begin_inset Formula $(p\wedge q)\rightarrow q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Conjonction
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore p\wedge q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cet argument correspond à la tautologie 
+\begin_inset Formula $((p)\wedge(q))\rightarrow(p\wedge q)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Résolution
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\neg p\vee r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore q\vee r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cet argument correspond à la tautologie 
+\begin_inset Formula $((\neg p\vee r)\wedge(p\vee q))\rightarrow(q\vee r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Règles concernant la logique quantificative
+\end_layout
+
+\begin_layout Subsubsection*
+Instantiation universelle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall xP(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore P(c)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Généralisation universelle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(c)$
+\end_inset
+
+, c étant arbitraire
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore\forall xP(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Instantiation existentielle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists xP(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\therefore P(c)$
+\end_inset
+
+ pour un certain c
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Généralisation existentielle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\therefore P(c)$
+\end_inset
+
+ pour un certain c
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists xP(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Modus Ponens universel
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x(P(x)\rightarrow Q(x))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(a)$
+\end_inset
+
+, a étant un élément partiulier du domaine
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore Q(a)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Formes Normales
+\end_layout
+
+\begin_layout Subsection
+Forme normale disjonctive
+\end_layout
+
+\begin_layout Definition
+Une proposition est dans sa forme normale disjonctive si elle consiste en
+ (1...n) disjonctions où chaque disjonction est une conjonction de (1...m) formules
+ atomiques ou de négations de formules atomiques
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(\neg p\wedge q)\vee(p\wedge\neg q)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Forme normale conjonctive
+\end_layout
+
+\begin_layout Definition
+Une proposition est dans sa forme nomarle conjonctive si c'est une conjonction
+ de disjonctions.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(p\vee\neg r)\wedge(\neg q\vee p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Toutes les propositions peuvent être réécrites sous leurs formes normales
+ conjonctive et disjonctive.
+\end_layout
+
+\begin_layout Subsection
+Forme normale disjonctive principale
+\end_layout
+
+\begin_layout Definition
+Les mintermes de p et q sont des conjonctions où les variables apparaissent
+ soit niées soit non-niées, mais n'apparaissent pas et niées et non-niées.
+ Les quatre mintermes de p et q sont 
+\begin_inset Formula $p\wedge q$
+\end_inset
+
+, 
+\begin_inset Formula $p\wedge\neg q$
+\end_inset
+
+, 
+\begin_inset Formula $\neg p\wedge q$
+\end_inset
+
+ et 
+\begin_inset Formula $\neg p\wedge\neg q$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+La forme normale disjonctive principale d'une formule est une formule équivalent
+ constituée uniquement de disjonctions de mintermes.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Pour construire une forme normale disjonctive principale, il est nécessaire
+ de remplacer les implications et les équivalences au moyen des opérateurs
+ 
+\begin_inset Formula $\wedge,$
+\end_inset
+
+
+\begin_inset Formula $\vee,$
+\end_inset
+
+
+\begin_inset Formula $\neg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Forme normale conjonctive principale
+\end_layout
+
+\begin_layout Definition
+Les maxtermes de p et q sont des disjonction où les variables apparaissent
+ soit niées soit non-niées, mais n'apparaissent pas et niées et non-niées.
+ Les quatre maxtermes de p et q sont 
+\begin_inset Formula $p\vee q$
+\end_inset
+
+, 
+\begin_inset Formula $p\vee\neg q$
+\end_inset
+
+, 
+\begin_inset Formula $\neg p\vee q$
+\end_inset
+
+ et 
+\begin_inset Formula $\neg p\vee\neg q$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+La forme normale conjonctive principale d'une formule est une formule équivalent
+e constituée uniquement de conjonctions de maxtermes.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Forme normale prénexe
+\end_layout
+
+\begin_layout Definition
+Une formule F en logique de premier ordre est dite dans sa forme normale
+ prénexe si et seulement si la formule F est sous forme 
+\begin_inset Formula $(Q_{1}x_{1})...(Q_{n}x_{n})(M)$
+\end_inset
+
+ où chaque 
+\begin_inset Formula $Q_{i}x_{i}$
+\end_inset
+
+ est soit 
+\begin_inset Formula $\forall x_{i}$
+\end_inset
+
+ soit 
+\begin_inset Formula $\exists x_{i}$
+\end_inset
+
+ et 
+\begin_inset Formula $M$
+\end_inset
+
+ est une formule ne contenant aucun quantificateur.
+ 
+\begin_inset Formula $(Q_{1}x_{1})...(Q_{n}x_{n})$
+\end_inset
+
+ est appelé le préfixe et 
+\begin_inset Formula $M$
+\end_inset
+
+ la matrice de l formule.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(\forall x)(\forall y)(P(x,y)\wedge Q(y))$
+\end_inset
+
+ est sous forme normale prénexe.
+\end_layout
+
+\begin_layout Section
+Introduction aux preuves
+\end_layout
+
+\begin_layout Subsection
+Preuve directe
+\end_layout
+
+\begin_layout Standard
+Les théorèmes sont souvent sous la forme 
+\begin_inset Formula $\forall x(P(x)\rightarrow Q(x))$
+\end_inset
+
+.
+ On peut les prouver en montrant qu'en prenant un c arbitraire, 
+\begin_inset Formula $P(c)\rightarrow Q(c)$
+\end_inset
+
+ et en utilisant la généralisation universelle.
+\end_layout
+
+\begin_layout Standard
+On assume que p est vrai.
+ On utilise les règles d'inférences, les axiomes et les équivalences logiques
+ afin de montrer que q est obligatoirement vrai.
+\end_layout
+
+\begin_layout Example*
+Une preuve directe pour 
+\begin_inset Quotes eld
+\end_inset
+
+si 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier impair, alors 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ est impair
+\begin_inset Quotes erd
+\end_inset
+
+.
+ On assume que n est impair, donc 
+\begin_inset Formula $n=2k+1$
+\end_inset
+
+, 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+ Si l'on met les deux cotés de l'équation au carré, on obtient
+\begin_inset Formula 
+\[
+n^{2}=4k^{2}+4k+1=2(2k^{2}+2k)+1=2r+1
+\]
+
+\end_inset
+
+ où 
+\begin_inset Formula $r=2k^{2}+2k$
+\end_inset
+
+.
+ On a donc montré que si 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier impair, alors 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ est un entier impair.
+\end_layout
+
+\begin_layout Subsection
+Preuve par contraposition
+\end_layout
+
+\begin_layout Standard
+On assume 
+\begin_inset Formula $\neg q$
+\end_inset
+
+ et on montre que 
+\begin_inset Formula $\neg p$
+\end_inset
+
+ est aussi vrai.
+ Si l'on donne une preuve que 
+\begin_inset Formula $\neg q\rightarrow\neg p$
+\end_inset
+
+ est vrai, alors on donne aussi une preuve pour 
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Prouver que si 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier et que 
+\begin_inset Formula $3n+2$
+\end_inset
+
+ est impair, alors 
+\begin_inset Formula $n$
+\end_inset
+
+ est impair.
+ On assume que 
+\begin_inset Formula $n$
+\end_inset
+
+ est pair.
+ 
+\begin_inset Formula 
+\[
+3n+2=3(2k)+2=6k+2=2(3k+1)=2j
+\]
+
+\end_inset
+
+pour 
+\begin_inset Formula $j=3k=1$
+\end_inset
+
+.
+ On peut donc dire que 
+\begin_inset Formula $3n+2$
+\end_inset
+
+ est pair.
+ On a donc prouvé
+\begin_inset Formula $\neg q\rightarrow\neg p$
+\end_inset
+
+, et donc 
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Preuve par contradiction
 \end_layout
 
 \end_body
