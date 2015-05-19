@@ -42,7 +42,7 @@ End
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
@@ -57,6 +57,11 @@ End
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 3cm
+\topmargin 4cm
+\rightmargin 3cm
+\bottommargin 4cm
+\footskip 2cm
 \secnumdepth 3
 \tocdepth 1
 \paragraph_separation skip
@@ -392,7 +397,7 @@ Deux propositions sont équivalentes si elles ont toujours la même valeur
 \end_layout
 
 \begin_layout Section
-Equivalences logiques
+Équivalences logiques
 \end_layout
 
 \begin_layout Subsection
@@ -417,7 +422,7 @@ tion.
 \end_deeper
 \end_deeper
 \begin_layout Subsection
-Equivalence logique
+Équivalence logique
 \end_layout
 
 \begin_layout Definition
@@ -463,7 +468,7 @@ Ces propositions sont facilement vérifiables en utilisant des tables de
 \end_layout
 
 \begin_layout Subsubsection*
-Equivalences logiques clés
+Équivalences logiques clés
 \end_layout
 
 \begin_layout Itemize
@@ -664,7 +669,7 @@ Des équivalences moins fréquentes se trouvent au slide 48.
 \end_layout
 
 \begin_layout Subsection
-Satisfiabilité compositionnelle
+Satisfaisabilité compositionnelle
 \end_layout
 
 \begin_layout Definition
@@ -861,7 +866,7 @@ Un troisième quantificateur signifie que
 \end_layout
 
 \begin_layout Subsection
-Equivalence en logique des prédicats
+Équivalence en logique des prédicats
 \end_layout
 
 \begin_layout Definition
@@ -2125,7 +2130,7 @@ Règles concernant la logique quantificative
 \end_layout
 
 \begin_layout Subsubsection*
-Instantiation universelle
+Instanciation universelle
 \end_layout
 
 \begin_layout Standard
@@ -2243,7 +2248,7 @@ Généralisation universelle
 \end_layout
 
 \begin_layout Subsubsection*
-Instantiation existentielle
+Instanciation existentielle
 \end_layout
 
 \begin_layout Standard
@@ -2367,7 +2372,7 @@ Modus Ponens universel
 \begin_inset Formula $P(a)$
 \end_inset
 
-, a étant un élément partiulier du domaine
+, a étant un élément particulier du domaine
 \end_layout
 
 \end_inset
@@ -2433,7 +2438,7 @@ Forme normale conjonctive
 \end_layout
 
 \begin_layout Definition
-Une proposition est dans sa forme nomarle conjonctive si c'est une conjonction
+Une proposition est dans sa forme normale conjonctive si c'est une conjonction
  de disjonctions.
 \end_layout
 
@@ -2765,7 +2770,7 @@ Prouver que si l'on choisit 22 jours dans un calendrier, au moins 4 d'entre
  jour.
  Comme une semaine contient 7 jours, on n'aurait sélectionné seulement 21
  jours.
- Cela contradit donc le fait que l'on ait choisi 22 jours.
+ Cela contredit donc le fait que l'on ait choisi 22 jours.
  
 \begin_inset Newpage newpage
 \end_inset
@@ -3188,6 +3193,248 @@ Combien de cartes doivent-elles êtres sélectionnées dans un jeu de 52 cartes
 
 \begin_layout Section
 Permutations et combinaisons
+\end_layout
+
+\begin_layout Subsection
+Permutations
+\end_layout
+
+\begin_layout Definition
+Une permutation d'un ensemble d'objets distincts est un arrangement ordonné
+ de ces objets.
+ Un arrangement ordonné de 
+\begin_inset Formula $r$
+\end_inset
+
+ éléments d'un ensemble est appelée une 
+\emph on
+r-permutation.
+\end_layout
+
+\begin_layout Notation*
+Le nombre de r-permutations d'un ensemble constitué de n éléments se note
+ 
+\begin_inset Formula $P(r,n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Si 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier positif et 
+\begin_inset Formula $r$
+\end_inset
+
+ est un entier avec 
+\begin_inset Formula $1\leq r\leq n$
+\end_inset
+
+, alors il y a 
+\begin_inset Formula $P(n,r)=n.(n-1).(n-2)...(n-r+1)$
+\end_inset
+
+ r-permutations d'un ensemble avec 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments distincts.
+\end_layout
+
+\begin_layout Remark*
+\begin_inset Formula $P(n,0)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+Si 
+\begin_inset Formula $n$
+\end_inset
+
+ et 
+\begin_inset Formula $r$
+\end_inset
+
+ sont des entiers avec 
+\begin_inset Formula $1\leq r\leq n$
+\end_inset
+
+, alors 
+\begin_inset Formula $P(n,r)=\frac{n!}{(n-r)!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Combinaisons
+\end_layout
+
+\begin_layout Definition
+Une r-combinaison d'éléments dans un ensemble est une sélection non-ordonnée
+ de r éléments de l'ensemble.
+ Une r-combinaison d'un ensemble est donc un sous-ensemble de taille r de
+ cet ensemble.
+\end_layout
+
+\begin_layout Notation*
+Le nombre de r-combinaisons d'un ensemble se note 
+\begin_inset Formula $C(n,r)$
+\end_inset
+
+.
+ On peut aussi le noter 
+\begin_inset Formula $\left(\begin{array}{c}
+n\\
+r
+\end{array}\right)$
+\end_inset
+
+, appelé coefficient binomial.
+\end_layout
+
+\begin_layout Theorem
+Le nombre de r-combinaisons d'un ensemble avec 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments, où 
+\begin_inset Formula $0\leq r\leq n$
+\end_inset
+
+, est égal à 
+\begin_inset Formula $C(n,r)=\frac{n!}{(n-r)!r!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+Si 
+\begin_inset Formula $r$
+\end_inset
+
+ et 
+\begin_inset Formula $n$
+\end_inset
+
+ sont deux entiers non-négatifs avec 
+\begin_inset Formula $r\leq n$
+\end_inset
+
+, 
+\begin_inset Formula $C(n,r)=C(n,n-r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Preuves combinatoires
+\end_layout
+
+\begin_layout Definition
+Une preuve combinatoire d'une identité qui est une preuve qui utilise une
+ des deux méthodes suivantes.
+\end_layout
+
+\begin_layout Enumerate
+Une preuve par double dénombrement utilise des arguments de dénombrement
+ pour prouver que les deux éléments d'une identité comptent le même nombre
+ d'éléments, mais de façon différente.
+\end_layout
+
+\begin_layout Enumerate
+Une preuve bijective démontre qu'il y a une bijection entre les ensembles
+ d'objets comptés par les deux membres de l'identité.
+\end_layout
+
+\begin_layout Standard
+Deux exemples se trouvent sur la slide 40.
+\end_layout
+
+\begin_layout Section
+Coefficients binomiaux et identités
+\end_layout
+
+\begin_layout Definition
+Une expression binomiale est une expression de la somme de deux termes,
+ comme 
+\begin_inset Formula $x+y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Identité de Pascal.
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ et 
+\begin_inset Formula $k$
+\end_inset
+
+ sont deux entiers positifs avec 
+\begin_inset Formula $n\geq k$
+\end_inset
+
+.
+ Alors, 
+\begin_inset Formula 
+\[
+C(n+1,k)=C(n,k-1)+C(n,k)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+Théorème binomial.
+ Soient x et y, deux variables, et n un entier non-négatif.
+ Alors,
+\begin_inset Formula 
+\[
+(x+y)^{n}=\sum_{j=0}^{n}C(n,j)x^{n-j}y^{j}=C(n,0)x^{n}+C(n,1)x^{n-1}y+...+C(n,n-1)xy^{n-1}+C(n,n)y^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Corollary
+Avec 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\sum_{k=0}^{n}C(n,k)=2^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Permutations et combinaisons généralisées
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
