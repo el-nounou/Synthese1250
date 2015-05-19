@@ -2568,7 +2568,7 @@ Une formule F en logique de premier ordre est dite dans sa forme normale
 \begin_inset Formula $M$
 \end_inset
 
- la matrice de l formule.
+ la matrice de la formule.
 \end_layout
 
 \begin_layout Example*
@@ -2912,14 +2912,282 @@ Pour
 \end_inset
 
  est vrai pour tous les entiers positifs.
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
-Compte
+Dénombrement
+\end_layout
+
+\begin_layout Section
+Les bases du dénombrement
+\end_layout
+
+\begin_layout Subsection
+Règle du produit
+\end_layout
+
+\begin_layout Theorem
+Une procédure peut être décomposée en une séquence de deux tâches.
+ Il existe 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ façons d'exécuter la première et 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ façons d'exécuter la deuxième.
+ Il y a alors 
+\begin_inset Formula $n_{1}.n_{2}$
+\end_inset
+
+ façons d'exécuter la procédure.
+\end_layout
+
+\begin_layout Example*
+On a une séquence de 7 bits.
+ Il existe 
+\begin_inset Formula $2^{7}$
+\end_inset
+
+ séquences différentes possibles.
+\end_layout
+
+\begin_layout Notation*
+\begin_inset Formula $|S|$
+\end_inset
+
+ représente la taille de l'ensemble S.
+\end_layout
+
+\begin_layout Definition
+Soit S un ensemble.
+ Si S admet exactement 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments, où 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier non négatif, on dit que S est un ensemble fini et que 
+\begin_inset Formula $n$
+\end_inset
+
+ est la cardinalité de S.
+ On la note 
+\begin_inset Formula $|S|$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
+De la règle du produit découlent certaines propriétés :
+\end_layout
 
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $A_{1},\, A_{2},\,...\,,\, A_{n}$
+\end_inset
+
+ sont des ensembles finis, alors le nombre d'éléments du produit cartésiens
+ de ces ensembles et le produit du nombre d'éléments de chaque ensemble.
+\end_layout
+
+\begin_layout Enumerate
+Choisir un élément dans le produit cartésien 
+\begin_inset Formula $A_{1}\times A_{2}\times...\times A_{n}$
+\end_inset
+
+ revient à choisir un élément dans chaque ensemble.
+\end_layout
+
+\begin_layout Enumerate
+La cardinalité du produit cartésien d'ensembles est égale au produit des
+ cardinalités de ces ensemble.
+ 
+\begin_inset Formula $|A_{1}\times A_{2}\times...\times A_{n}|=|A_{1}|.|A_{2}|.\:...\:.|A_{n}|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Règle de la somme
+\end_layout
+
+\begin_layout Theorem
+Une procédure peut être exécutée de une de 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ façons, ou de une de 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ façons, et aucune façon de 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ n'est égale à une façon de 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+.
+ Il y a alors 
+\begin_inset Formula $n_{1}+n_{2}$
+\end_inset
+
+ façons d'exécuter la procédure.
+\end_layout
+
+\begin_layout Standard
+Si l'on parle en terme d'ensembles, 
+\begin_inset Formula $|A\cup B|=|A|+|B|$
+\end_inset
+
+.
+ En généralisant, cela donne 
+\begin_inset Formula $|A_{1}\cup A_{2}\cup...\cup A_{n}|=|A_{1}|+|A_{2}|+...+|A_{n}|$
+\end_inset
+
+, avec 
+\begin_inset Formula $A_{i}\cap A_{j}=\emptyset$
+\end_inset
+
+ pour tout i, j.
+\end_layout
+
+\begin_layout Example*
+Il est possible de combiner les règles de somme et de produit.
+ Dénombrons le nombre de séquences qui se composent soit d'une lettre, soit
+ d'une lettre suivie d'un chiffre.
+ On obtient 
+\begin_inset Formula $26+26.10=286$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Règle de la soustraction
+\end_layout
+
+\begin_layout Theorem
+Une procédure peut être exécutée de une de 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ façons, ou de une de 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ façons.
+ Il y a alors 
+\begin_inset Formula $n_{1}+n_{2}$
+\end_inset
+
+ façons d'exécuter la procédure, en retirant le nombre de tâches communes
+ à 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+On écrit 
+\begin_inset Formula $|A\cup B|=|A|+|B|-|A\cap B|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Règle de la division
+\end_layout
+
+\begin_layout Theorem
+Une procédure peut être exécutée de 
+\begin_inset Formula $n$
+\end_inset
+
+ façons, et, pour chaque façon 
+\begin_inset Formula $f$
+\end_inset
+
+, il y a exactement 
+\begin_inset Formula $d$
+\end_inset
+
+ façons qui correspondent à 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Il y a alors 
+\begin_inset Formula $\nicefrac{n}{d}$
+\end_inset
+
+ façons d'exécuter la procédure.
+\end_layout
+
+\begin_layout Standard
+En termes d'ensembles, on dit : si l'ensemble fini 
+\begin_inset Formula $A$
+\end_inset
+
+ est l'union de 
+\begin_inset Formula $n$
+\end_inset
+
+ sous-ensembles disjoints par paires, chacun avec 
+\begin_inset Formula $d$
+\end_inset
+
+ éléments, alors 
+\begin_inset Formula $n=\frac{|A|}{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Principe du nid de pigeons
+\end_layout
+
+\begin_layout Example*
+Combien de cartes doivent-elles êtres sélectionnées dans un jeu de 52 cartes
+ (et placées sur des tas selon leur couleur) afin de s'assurer d'avoir au
+ moins un tas de 3 cartes de la même couleur ? Selon le principe du nid
+ de pigeons, au moins un des tas contient 
+\begin_inset Formula $\frac{N}{4}$
+\end_inset
+
+ cartes.
+ Le plus petit 
+\begin_inset Formula $N$
+\end_inset
+
+ tel que 
+\begin_inset Formula $\frac{N}{4}\geq3$
+\end_inset
+
+ est 9.
+ Il faut donc tirer 9 cartes pour en avoir au moins 3 de la même couleur.
+\end_layout
+
+\begin_layout Section
+Permutations et combinaisons
 \end_layout
 
 \end_body
