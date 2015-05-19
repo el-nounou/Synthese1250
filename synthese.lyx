@@ -672,8 +672,8 @@ Des équivalences moins fréquentes se trouvent au slide 48.
 Satisfaisabilité compositionnelle
 \end_layout
 
-\begin_layout Definition
-une proposition composée est satisfaisable si il existe une assignation
+\begin_layout Theorem
+Une proposition composée est satisfaisable si il existe une assignation
  de valeurs de vérité à ses variables telles que la proposition est vraie.
  Dans le cas contraire, on parle de proposition non-satisfaisable.
 \end_layout
@@ -869,7 +869,7 @@ Un troisième quantificateur signifie que
 Équivalence en logique des prédicats
 \end_layout
 
-\begin_layout Definition
+\begin_layout Theorem
 Deux déclarations impliquant des prédicats et des quantificateurs sont logiqueme
 nt équivalentes si elles ont la même valeur de vérité pour chaque prédicat
  substitué dans ces déclarations, et pour chaque domaine utilisé pour les
@@ -3433,8 +3433,550 @@ Avec
 Permutations et combinaisons généralisées
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+Permutations avec répétition
+\end_layout
 
+\begin_layout Theorem
+Le nombre de r-permutations d'un ensemble de 
+\begin_inset Formula $n$
+\end_inset
+
+ objets avec répétition autorisée vaut 
+\begin_inset Formula $n^{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Combinaisons avec répétition
+\end_layout
+
+\begin_layout Theorem
+Le nombre de r-combinaisons d'un ensemble de 
+\begin_inset Formula $n$
+\end_inset
+
+ objets avec répétition autorisée vaut 
+\begin_inset Formula $C(n+r-1,r)=C(n+r-1,n-1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Permutations avec des objets indistinguables
+\end_layout
+
+\begin_layout Theorem
+Le nombre de permutations différentes de 
+\begin_inset Formula $n$
+\end_inset
+
+ objets, où il y a 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ objets indistinguables de type 1, 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ objets indistinguables de type 2, ...
+ , 
+\begin_inset Formula $n_{k}$
+\end_inset
+
+objets indistinguables de type k, est 
+\begin_inset Formula 
+\[
+\frac{n!}{n_{1}!n_{2}!...n_{3}!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Techniques de dénombrement avancées
+\end_layout
+
+\begin_layout Section
+Applications des relations de récurrence 
+\end_layout
+
+\begin_layout Definition
+Une relation de récurrence pour la séquence 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ est une équation qui exprime 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ en termes d'un ou plus des termes précédents de la séquence, i.e., 
+\begin_inset Formula $a_{0},a_{1,},...,a_{n-1}$
+\end_inset
+
+ avec n un entier non-négatif 
+\begin_inset Formula $\geq n_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Une séquence est appelée solution d'une relation de récurrence si ses termes
+ satisfont la relation.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Les conditions initiales d'une séquence spécifient les termes qui précèdent
+ le premier terme où la relation de récurrence prend effet.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Résolution des relations de récurrence linéaires
+\end_layout
+
+\begin_layout Subsection
+Relations de récurrence linéaires homogènes
+\end_layout
+
+\begin_layout Definition
+Une relation de récurrence linéaire homogène de degré 
+\begin_inset Formula $k$
+\end_inset
+
+ à coefficients constants est une équation de récurrence du type 
+\begin_inset Formula $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}$
+\end_inset
+
+, où 
+\begin_inset Formula $c_{1},c_{2},...,c_{k}$
+\end_inset
+
+ sont des nombres réels et 
+\begin_inset Formula $c_{k}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Elle est linéaire car la partie droite de l'équation est une somme des termes
+ précédents de la séquence, chacun étant multiplié par une fonction de 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Elle est homogène car il n'y a pas de termes qui ne sont pas des multiples
+ de a.
+ Son degré est k car elle est exprimée en fonction des k termes précédents
+ de la séquence.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $f_{n}=f_{n-1}+f_{n-2}$
+\end_inset
+
+ est une relation de récurrence linéaire homogène de degré 2.
+\end_layout
+
+\begin_layout Enumerate
+On regarde pour des solutions du type 
+\begin_inset Formula $a_{n}=r^{n}$
+\end_inset
+
+, où r est constant.
+\end_layout
+
+\begin_layout Enumerate
+On écrit l'équation caractéristique grâce à des manipulations algébriques.
+\begin_inset Formula 
+\[
+r^{k}-c_{1}r^{k-1}-...-c_{k-1}r-c_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La séquence 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ avec 
+\begin_inset Formula $a_{n}=r^{n}$
+\end_inset
+
+ est solution si et seulement si 
+\begin_inset Formula $r^{n}$
+\end_inset
+
+ est solution de l'équation caractéristique.
+\end_layout
+
+\begin_layout Enumerate
+Les solutions de l'équation caractéristique sont appelées les racines caractéris
+tiques de la relation de récurrence.
+ Elles sont utilisées pour donner une formule explicite pour toutes les
+ solutions de la relation de récurrence.
+\end_layout
+
+\begin_layout Subsubsection*
+Relations de degré 2
+\end_layout
+
+\begin_layout Theorem
+Soient 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ des nombres réels.
+ Supposons que 
+\begin_inset Formula $r^{2}-c_{1}r-c_{2}=0$
+\end_inset
+
+ a deux racines, 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+.
+ Alors, la séquence 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ est une solution de la relation de récurrence 
+\begin_inset Formula $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}$
+\end_inset
+
+ si et seulement si 
+\begin_inset Formula $a_{n}=\alpha_{1}r_{1}^{n}+\alpha_{2}r_{2}^{n}$
+\end_inset
+
+ pour 
+\begin_inset Formula $n=0,1,2,...$
+\end_inset
+
+ et pour 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ constants.
+\end_layout
+
+\begin_layout Example*
+Trouvons la solution de la relation de récurrence 
+\begin_inset Formula $a_{n}=a_{n-1}+2a_{n-2}$
+\end_inset
+
+ avec 
+\begin_inset Formula $a_{0}=2,a_{1}=7$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+L'équation caractéristique est 
+\begin_inset Formula $r^{2}-r-2=0$
+\end_inset
+
+.
+ Ses racines sont 2 et -1.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ est donc solution de la relation si et seulement si 
+\begin_inset Formula $a_{n}=\alpha_{1}2^{n}+\alpha_{2}(-1)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Grâce aux conditions initiales, on trouve que 
+\begin_inset Formula $a_{0}=2=\alpha_{1}+\alpha_{2}$
+\end_inset
+
+ et 
+\begin_inset Formula $a_{1}=7=2\alpha_{1}-\alpha_{2}$
+\end_inset
+
+.
+ En résolvant le système, on obtient 
+\begin_inset Formula $\alpha_{1}=3,\alpha_{2}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+La solution est donc 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ avec 
+\begin_inset Formula $a_{n}=3.2^{n}-(-1)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Avec une racine répétée
+\end_layout
+
+\begin_layout Theorem
+Soient 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $c_{2}\neq0$
+\end_inset
+
+ des nombres réels.
+ Supposons que 
+\begin_inset Formula $r^{2}-c_{1}r-c_{2}=0$
+\end_inset
+
+ a un racine répétée, 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+.
+ Alors, la séquence 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ est une solution de la relation de récurrence 
+\begin_inset Formula $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}$
+\end_inset
+
+ si et seulement si 
+\begin_inset Formula $a_{n}=\alpha_{1}r_{0}^{n}+\alpha_{2}nr_{0}^{n}$
+\end_inset
+
+ pour 
+\begin_inset Formula $n=0,1,2,...$
+\end_inset
+
+ et pour 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ constants.
+\end_layout
+
+\begin_layout Subsubsection*
+Relations de degré k
+\end_layout
+
+\begin_layout Theorem
+Soient 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+,
+\begin_inset Formula $c_{2}$
+\end_inset
+
+,...,
+\begin_inset Formula $c_{k}$
+\end_inset
+
+ des nombres réels.
+ Supposons que 
+\begin_inset Formula $r^{k}-c_{1}r^{k-1}-...-c_{k}=0$
+\end_inset
+
+ a 
+\begin_inset Formula $k$
+\end_inset
+
+ racines, 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+,
+\begin_inset Formula $r_{2}$
+\end_inset
+
+,...,
+\begin_inset Formula $r_{k}$
+\end_inset
+
+.
+ Alors, la séquence 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ est une solution de la relation de récurrence 
+\begin_inset Formula $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}$
+\end_inset
+
+ si et seulement si 
+\begin_inset Formula $a_{n}=\alpha_{1}r_{1}^{n}+\alpha_{2}r_{2}^{n}+...+\alpha_{k}r_{k}^{n}$
+\end_inset
+
+ pour 
+\begin_inset Formula $n=0,1,2,...$
+\end_inset
+
+ et pour 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+,...,
+\begin_inset Formula $\alpha_{k}$
+\end_inset
+
+ constants.
+\end_layout
+
+\begin_layout Subsection
+Relations de récurrence linéaires non-homogènes
+\end_layout
+
+\begin_layout Definition
+Une relation de récurrence linéaire non-homogène de degré 
+\begin_inset Formula $k$
+\end_inset
+
+ à coefficients constants est une équation de récurrence du type 
+\begin_inset Formula $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}+F(n)$
+\end_inset
+
+, où 
+\begin_inset Formula $c_{1},c_{2},...,c_{k}$
+\end_inset
+
+ sont des nombres réels et 
+\begin_inset Formula $c_{k}\neq0$
+\end_inset
+
+ et 
+\begin_inset Formula $F(n)$
+\end_inset
+
+ est une fonction non nulle dépendant seulement de n.
+\end_layout
+
+\begin_layout Definition
+La relation 
+\begin_inset Formula $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}$
+\end_inset
+
+ est appelée la relation de récurrence homogène associée.
+\end_layout
+
+\begin_layout Theorem
+Si 
+\begin_inset Formula $\left\{ a_{n}^{(p)}\right\} $
+\end_inset
+
+ est une solution particulière de la relation 
+\begin_inset Formula $a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}+F(n)$
+\end_inset
+
+, alors toutes les solutions sont de la forme 
+\begin_inset Formula $\{a_{n}^{(p)}+a_{n}^{(h)}\}$
+\end_inset
+
+ où 
+\begin_inset Formula $\left\{ a_{n}^{(h)}\right\} $
+\end_inset
+
+ est une solution de la relation homogène associée.
+\end_layout
+
+\begin_layout Section
+Inclusion-Exclusion
+\end_layout
+
+\begin_layout Subsection*
+Cas de 3 ensembles finis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Approche état-espace
+\end_layout
+
+\begin_layout Standard
+cf.
+ slides.
+\end_layout
+
+\begin_layout Part
+Graphes
+\end_layout
+
+\begin_layout Section
+Graphes et modèles de graphes
+\end_layout
+
+\begin_layout Definition
+Un graphe 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ consistes en un ensemble non-vide V de nœuds et un ensemble E d'arêtes.
+ Chaque arête a soit un soit deux noeuds associés à elle-même, appelés ses
+ extrémités.
+ On dit qu'une arête connecte ses extrémités.
 \end_layout
 
 \end_body
