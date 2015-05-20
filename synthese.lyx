@@ -83,6 +83,10 @@ End
 SINF1250 - Mathématiques pour l'informatique
 \end_layout
 
+\begin_layout Author
+Jerome Thiry
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
@@ -3977,21 +3981,21 @@ Un graphe
 \begin_inset Formula $G=(V,E)$
 \end_inset
 
- consiste en un ensemble non-vide V de nœuds et un ensemble E d'arêtes.
- Chaque arête a soit un soit deux nœuds associés à elle-même, appelés ses
+ consiste en un ensemble non-vide V de nœuds et un ensemble E d'arcs.
+ Chaque arc a soit un soit deux nœuds associés à elle-même, appelés ses
  extrémités.
- On dit qu'une arête connecte ses extrémités.
+ On dit qu'un arc connecte ses extrémités.
 \end_layout
 
 \begin_layout Standard
-Dans un graphe simple, chaque arête connecte deux nœuds différents et il
- n'y pas deux arêtes entre deux noeuds.
+Dans un graphe simple, chaque arc connecte deux nœuds différents et il n'y
+ pas deux arcs entre deux noeuds.
 \end_layout
 
 \begin_layout Standard
-Dans un multigraphe, il peut y avoir plusieurs (m) arêtes entre deux nœuds
+Dans un multigraphe, il peut y avoir plusieurs (m) arcs entre deux nœuds
  u et v.
- On dit alors que {u, v} est une arête de multiplicité m.
+ On dit alors que {u, v} est un arc de multiplicité m.
 \end_layout
 
 \begin_layout Standard
@@ -4003,8 +4007,8 @@ Un graphe dirigé
 \begin_inset Formula $G=(V,E)$
 \end_inset
 
- consiste en un ensemble non-vide V de nœuds et un ensemble E d'arêtes dirigées.
- L'arête associée à la paire ordonnée (u,v) démarre de u et finit à v.
+ consiste en un ensemble non-vide V de nœuds et un ensemble E d'arcs dirigés.
+ L'arc associé à la paire ordonnée (u,v) démarre de u et finit à v.
 \end_layout
 
 \begin_layout Standard
@@ -4038,7 +4042,7 @@ Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arêtes
+Arcs
 \end_layout
 
 \end_inset
@@ -4047,7 +4051,7 @@ Arêtes
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arêtes multiples ?
+Arcs multiples ?
 \end_layout
 
 \end_inset
@@ -4076,7 +4080,7 @@ Graphe simple
 \begin_inset Text
 
 \begin_layout Plain Layout
-Non-dirigées
+Non-dirigés
 \end_layout
 
 \end_inset
@@ -4120,7 +4124,7 @@ Multigraphe
 \begin_inset Text
 
 \begin_layout Plain Layout
-Non-dirigées
+Non-dirigés
 \end_layout
 
 \end_inset
@@ -4164,7 +4168,7 @@ Pseudographe
 \begin_inset Text
 
 \begin_layout Plain Layout
-Non-dirigées
+Non-dirigés
 \end_layout
 
 \end_inset
@@ -4208,7 +4212,7 @@ Graphe dirigé simple
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dirigées
+Dirigés
 \end_layout
 
 \end_inset
@@ -4252,7 +4256,7 @@ Multigraphe dirigé
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dirigées
+Dirigés
 \end_layout
 
 \end_inset
@@ -4296,7 +4300,7 @@ Graphe mixte
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dirigées & non-dirigées
+Dirigés & non-dirigés
 \end_layout
 
 \end_inset
@@ -4365,12 +4369,12 @@ Terminologie basique
 
 \begin_layout Definition
 Deux noeuds u, v d'un graphe non-dirigé G sont adjacents, ou voisins, dans
- G s'il y a une arête 
+ G s'il y a un arc 
 \begin_inset Formula $e$
 \end_inset
 
  entre u et v.
- Cette arête est incidente avec les arêtes u et v.
+ Cet arc est incident avec les arcs u et v.
 \end_layout
 
 \begin_deeper
@@ -4410,7 +4414,7 @@ L'ensemble de tous les voisins d'un noeud
 
 \begin_deeper
 \begin_layout Definition
-Le degré d'un noeud d'un graphe non-dirigé est les nombre d'arêtes incidentes
+Le degré d'un noeud d'un graphe non-dirigé est les nombre d'arcs incidents
  avec lui.
  Une boucle compte double.
  Le degré du noeud 
@@ -4435,7 +4439,7 @@ Si
 \begin_inset Formula $m$
 \end_inset
 
- arêtes, alors 
+ arcs, alors 
 \begin_inset Formula 
 \[
 2m=\sum_{v\in V}deg(v)
@@ -4457,12 +4461,12 @@ Le degré entrant de v, noté
 \begin_inset Formula $deg^{-}(v)$
 \end_inset
 
-, est le nombre d'arêtes qui finissent à v.
+, est le nombre d'arcs qui finissent à v.
  Le degré sortant de v, noté 
 \begin_inset Formula $deg^{+}(v)$
 \end_inset
 
-, est le nombre d'arêtes dont v est le noeud initial.
+, est le nombre d'arcs dont v est le noeud initial.
  Une boucle compte pour 1 et dans le degré entrant et dans le degré sortant.
 \end_layout
 
@@ -4471,7 +4475,7 @@ Soit
 \begin_inset Formula $G=(V,E)$
 \end_inset
 
- un graphe avec des arêtes dirigées.
+ un graphe avec des arcs dirigés.
  Alors,
 \begin_inset Formula 
 \[
@@ -4500,7 +4504,7 @@ Un graphe complet sur
 \begin_inset Formula $K_{n}$
 \end_inset
 
-, est le graphe simple qui contient exactement une arête entre chaque paire
+, est le graphe simple qui contient exactement un arc entre chaque paire
  de noeuds distincts.
 \end_layout
 
@@ -4525,7 +4529,7 @@ Un cycle
 \begin_inset Formula $v_{1},v_{2},...,v_{n}$
 \end_inset
 
- et en les arêtes 
+ et en les arcs 
 \begin_inset Formula $\{v_{1},v_{2}\},$
 \end_inset
 
@@ -4563,7 +4567,7 @@ et
 \begin_inset Formula $V_{2}$
 \end_inset
 
-, de façon à ce que chaque arête relie un noeud dans 
+, de façon à ce que chaque arc relie un noeud dans 
 \begin_inset Formula $V_{1}$
 \end_inset
 
@@ -4576,7 +4580,7 @@ et
 
 \begin_deeper
 \begin_layout Definition
-un graphe biparti complet 
+Un graphe biparti complet 
 \begin_inset Formula $K_{m,n}$
 \end_inset
 
@@ -4588,7 +4592,7 @@ un graphe biparti complet
 \begin_inset Formula $V_{2}$
 \end_inset
 
- de taille n, de telle sorte qu'il y ait une arête de chaque noeud de 
+ de taille n, de telle sorte qu'il y ait un arc de chaque noeud de 
 \begin_inset Formula $V_{1}$
 \end_inset
 
@@ -4648,8 +4652,8 @@ Soit
 \begin_inset Formula $(W,F)$
 \end_inset
 
-, où l'ensemble des arêtes F ne contient une arête dans E que si les deux
- extrémités se trouvent dans W.
+, où l'ensemble des arcs F ne contient un arc dans E que si les deux extrémités
+ se trouvent dans W.
 \end_layout
 
 \begin_deeper
@@ -4666,7 +4670,7 @@ L'union de deux graphes simples
 \begin_inset Formula $V_{1}\cup V_{2}$
 \end_inset
 
- et comme ensemble d'arêtes 
+ et comme ensemble d'arcs 
 \begin_inset Formula $E_{1}\cup E_{2}$
 \end_inset
 
@@ -4690,7 +4694,7 @@ Liste d'adjacence
 
 \begin_layout Definition
 Une liste d'adjacence peut être utilisée pour représenter un graphe sans
- arêtes multiples en spécifiant quels noeuds sont adjacents à chaque noeud
+ arcs multiples en spécifiant quels noeuds sont adjacents à chaque noeud
  du graphe.
 \end_layout
 
@@ -4756,7 +4760,7 @@ es par exemple.
 \begin_inset Formula $a_{ij}$
 \end_inset
 
- représentera le nombre d'arêtes entre les noeuds 
+ représentera le nombre d'arcs entre les noeuds 
 \begin_inset Formula $i$
 \end_inset
 
@@ -4777,7 +4781,7 @@ Soit
 \begin_inset Formula $G=(V,E)$
 \end_inset
 
- un graphe non-dirigé avec n noeuds et m arêtes.
+ un graphe non-dirigé avec n noeuds et m arcs.
  La matrice d'incidence est la matrice 
 \begin_inset Formula $n\times m$
 \end_inset
@@ -4790,11 +4794,11 @@ Soit
 \begin_inset Formula $m_{ij}=1$
 \end_inset
 
- si l'arête 
+ si l'arc 
 \begin_inset Formula $e_{j}$
 \end_inset
 
- est incidente avec 
+ est incident avec 
 \begin_inset Formula $v_{i}$
 \end_inset
 
@@ -4862,7 +4866,7 @@ Les graphes simples
 \end_layout
 
 \begin_layout Section
-Connectivité
+Connexité
 \end_layout
 
 \begin_layout Subsection
@@ -4870,16 +4874,16 @@ Chemins
 \end_layout
 
 \begin_layout Definition
-Un chemin est une séquence d'arêtes qui commence au noeud d'un graphe et
- qui voyage de noeud en noeud en suivant les arêtes du graphe.
+Un chemin est une séquence d'arcs qui commence au noeud d'un graphe et qui
+ voyage de noeud en noeud en suivant les arcs du graphe.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Definition
 Soit n un entier non-négatif et G un graphe non-dirigé.
- Un chemin de longueur n de u à v dans G est une séquence de n arêtes de
- G pour lesquelles il existe une séquence 
+ Un chemin de longueur n de u à v dans G est une séquence de n arcs de G
+ pour lesquels il existe une séquence 
 \begin_inset Formula $x_{0}=u,x_{1},...,x_{n-1}$
 \end_inset
 
@@ -4921,7 +4925,321 @@ Le chemin est un circuit si
 \end_layout
 
 \begin_layout Standard
-Un chemin est simple s'il ne passe pas plus d'une fois par chaque arête.
+Un chemin est simple s'il ne passe pas plus d'une fois par chaque arc.
+\end_layout
+
+\begin_layout Subsection
+Connexité dans un graphe non-dirigé
+\end_layout
+
+\begin_layout Definition
+Un graphe non-dirigé est dit connexe si il y a un chemin entre chaque paire
+ de noeuds.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Une composante connexe d'un graphe est un sous-graphe connexe de G qui n'est
+ pas un sous-graphe propre d'un autre sous-graphe connexe de G.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Connexité dans un graphe dirigé
+\end_layout
+
+\begin_layout Definition
+Un graphe dirigé est fortement connexe s'il existe un chemin de a vers b
+ et de b vers a quels que soient a et b dans le graphe.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Un graphe dirigé est faiblement connexe s'il existe un chemin entre a et
+ b dans le graphe non-dirigé correspondant.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Les sous-graphes d'un graphe dirigé qui sont fortement connexes mais qui
+ ne sont pas contenus dans d'autres sous-graphes connexes plus larges (le
+ sous-graphe fortement connexe maximal) sont appelés les composantes fortement
+ connexes de G.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Dénombrer les chemins entre deux noeuds
+\end_layout
+
+\begin_layout Theorem
+Soit G un graphe et A sa matrice d'adjacence.
+ Le nombre de chemins différents de longueur 
+\begin_inset Formula $r$
+\end_inset
+
+ de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+, où 
+\begin_inset Formula $r>0$
+\end_inset
+
+, est égal à la 
+\begin_inset Formula $(i,j)^{e}$
+\end_inset
+
+ position de 
+\begin_inset Formula $A^{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Chemins d'Euler et de Hamilton
+\end_layout
+
+\begin_layout Subsection
+Chemins et circuits d'Euler
+\end_layout
+
+\begin_layout Definition
+Un circuit d'Euler dans un graphe G est un circuit simple qui contient tous
+ les arcs de G.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Un chemin d'Euler est un chemin simple qui contient tous les arcs du graphe.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Un multigraphe connexe avec au moins deux noeuds a un circuit d'Euler si
+ et seulement si chacun de ses noeuds a un degré pair.
+ Il a un circuit d'Euler si et seulement si exactement deux noeuds du graphe
+ ont un degré impair.
+\end_layout
+
+\begin_layout Subsubsection*
+Conditions nécessaires pour les circuits et les chemins d'Euler
+\end_layout
+
+\begin_layout Itemize
+Le circuit d'Euler commence au noeud a et continue avec un arc reliant a
+ à b.
+ L'arc contribue à hauteur de 1 dans 
+\begin_inset Formula $deg(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Chaque fois que le circuit passe par un noeud, il contribue à hauteur de
+ 2 dans le degré du noeud.
+\end_layout
+
+\begin_layout Itemize
+Le circuit se termine à a, et contribue a hauteur de 1 à 
+\begin_inset Formula $deg(a)$
+\end_inset
+
+.
+ Celui-ci est donc pair.
+\end_layout
+
+\begin_layout Itemize
+Tous les autres degrés sont pairs.
+\end_layout
+
+\begin_layout Itemize
+Si ce n'est pas un circuit mais un chemin, les noeuds initial et final ont
+ un degré impair.
+\end_layout
+
+\begin_layout Subsubsection*
+Algorithme pour construire un circuit d'Euler
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Screenshot from 2015-05-20 11:51:52.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Construction d'un circuit d'Euler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Chemins et circuits d'Hamilton
+\end_layout
+
+\begin_layout Standard
+Les chemins et circuits d'Hamilton se basent sur le même principe que ceux
+ d'Euler, à la différence près qu'on ne cherche plus à ne passer par chaque
+ arc qu'une fois mais bien à ce que chaque noeud ne soit traversé qu'une
+ et une seule fois.
+\end_layout
+
+\begin_layout Definition
+Un chemin simple dans un graphe G qui passe par chaque noeud exactement
+ une fois est appelé chemin d'Hamilton.
+ Il en va de même pour les circuits.
+\end_layout
+
+\begin_layout Section
+Problèmes du chemin minimal
+\end_layout
+
+\begin_layout Subsection
+Algorithme de Dijkstra
+\end_layout
+
+\begin_layout Definition
+Un graphe qui a un nombre assigné à chaque arc est appelé un graphe pondéré.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Le poids d'un chemin dans un graphe est la somme des poids des arcs qui
+ constituent le chemin.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Algorithme de Dijkstra.
+ L'algorithme de Dijkstra calcule la longueur du plus court chemin entre
+ deux noeuds d'un graphe simple pondéré non-dirigé.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Screenshot from 2015-05-20 12:39:46.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Dijkstra
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Tout sous-chemin d'un chemin minimal doit être lui-même un chemin minimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+Preuve de l'algorithme de Dijkstra.
+ Voir slides 96-100.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Graphes planaires
+\end_layout
+
+\begin_layout Definition
+Un graphe est dit planaire si il peut être dessiné sans qu'aucun de ses
+ arcs ne se croise.
+\end_layout
+
+\begin_layout Theorem
+Formule d'Euler.
+ Soit G un graphe planaire connexe avec 
+\begin_inset Formula $e$
+\end_inset
+
+ arcs et 
+\begin_inset Formula $v$
+\end_inset
+
+ noeuds.
+ Soit r le nombre de régions d'une représentation planaire de G.
+ Alors
+\begin_inset Formula 
+\[
+r=e-v+2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Coloration de graphe
+\end_layout
+
+\begin_layout Definition
+La coloration d'un graphe simple est l'assignation d'une couleur à chaque
+ noeud de façon à ce qu'aucun noeud adjacent n'ait la même couleur.
+ Le nombre minimal de couleurs nécessaires à la coloration d'un graphe est
+ appelé le nombre chromatique du graphe.
+\end_layout
+
+\begin_layout Theorem
+Le nombre chromatique d'un graphe n'est jamais supérieur à 4.
+ La preuve de cela est très complexe.
+\end_layout
+
+\begin_layout Section
+L'algorithme PageRank
 \end_layout
 
 \end_body
