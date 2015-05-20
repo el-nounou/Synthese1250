@@ -3958,6 +3958,10 @@ Approche état-espace
 \begin_layout Standard
 cf.
  slides.
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
@@ -3973,10 +3977,951 @@ Un graphe
 \begin_inset Formula $G=(V,E)$
 \end_inset
 
- consistes en un ensemble non-vide V de nœuds et un ensemble E d'arêtes.
- Chaque arête a soit un soit deux noeuds associés à elle-même, appelés ses
+ consiste en un ensemble non-vide V de nœuds et un ensemble E d'arêtes.
+ Chaque arête a soit un soit deux nœuds associés à elle-même, appelés ses
  extrémités.
  On dit qu'une arête connecte ses extrémités.
+\end_layout
+
+\begin_layout Standard
+Dans un graphe simple, chaque arête connecte deux nœuds différents et il
+ n'y pas deux arêtes entre deux noeuds.
+\end_layout
+
+\begin_layout Standard
+Dans un multigraphe, il peut y avoir plusieurs (m) arêtes entre deux nœuds
+ u et v.
+ On dit alors que {u, v} est une arête de multiplicité m.
+\end_layout
+
+\begin_layout Standard
+Un pseudographe est un multigraphe auquel on ajoute le concept de boucle.
+\end_layout
+
+\begin_layout Definition
+Un graphe dirigé 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ consiste en un ensemble non-vide V de nœuds et un ensemble E d'arêtes dirigées.
+ L'arête associée à la paire ordonnée (u,v) démarre de u et finit à v.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="30col%">
+<column alignment="center" valignment="top" width="30col%">
+<column alignment="center" valignment="top" width="15col%">
+<column alignment="center" valignment="top" width="15col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arêtes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arêtes multiples ?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Boucles ?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Graphe simple
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-dirigées
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multigraphe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-dirigées
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\surd$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pseudographe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-dirigées
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\surd$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\surd$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Graphe dirigé simple
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dirigées
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Multigraphe dirigé
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dirigées
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\surd$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Graphe mixte
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dirigées & non-dirigées
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\surd$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\surd$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Types de graphes et propriétés
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Terminologie et types de graphes spéciaux
+\end_layout
+
+\begin_layout Subsection
+Terminologie basique
+\end_layout
+
+\begin_layout Definition
+Deux noeuds u, v d'un graphe non-dirigé G sont adjacents, ou voisins, dans
+ G s'il y a une arête 
+\begin_inset Formula $e$
+\end_inset
+
+ entre u et v.
+ Cette arête est incidente avec les arêtes u et v.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+L'ensemble de tous les voisins d'un noeud 
+\begin_inset Formula $v$
+\end_inset
+
+ de 
+\begin_inset Formula $G$
+\end_inset
+
+, noté 
+\begin_inset Formula $N(v)$
+\end_inset
+
+, s'appelle le voisinage de 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $A$
+\end_inset
+
+ est un sous-ensemble de 
+\begin_inset Formula $V$
+\end_inset
+
+, on note 
+\begin_inset Formula $N(A)$
+\end_inset
+
+ l'ensemble de tous les noeuds de G voisins d'au moins un des noeuds de
+ A.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Le degré d'un noeud d'un graphe non-dirigé est les nombre d'arêtes incidentes
+ avec lui.
+ Une boucle compte double.
+ Le degré du noeud 
+\begin_inset Formula $v$
+\end_inset
+
+ se note 
+\begin_inset Formula $deg(v)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Theorem
+Si 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ est un graphe non-dirigé avec 
+\begin_inset Formula $m$
+\end_inset
+
+ arêtes, alors 
+\begin_inset Formula 
+\[
+2m=\sum_{v\in V}deg(v)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+Un graphe non-dirigé a un nombre pair de noeuds de degré impair.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Le degré entrant de v, noté 
+\begin_inset Formula $deg^{-}(v)$
+\end_inset
+
+, est le nombre d'arêtes qui finissent à v.
+ Le degré sortant de v, noté 
+\begin_inset Formula $deg^{+}(v)$
+\end_inset
+
+, est le nombre d'arêtes dont v est le noeud initial.
+ Une boucle compte pour 1 et dans le degré entrant et dans le degré sortant.
+\end_layout
+
+\begin_layout Theorem
+Soit 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ un graphe avec des arêtes dirigées.
+ Alors,
+\begin_inset Formula 
+\[
+|E|=\sum_{v\in V}deg^{-}(v)+\sum_{v\in V}deg^{+}(v)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Types spéciaux de graphes simples
+\end_layout
+
+\begin_layout Subsubsection*
+Graphes complets
+\end_layout
+
+\begin_layout Definition
+Un graphe complet sur 
+\begin_inset Formula $n$
+\end_inset
+
+ noeuds, noté 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+, est le graphe simple qui contient exactement une arête entre chaque paire
+ de noeuds distincts.
+\end_layout
+
+\begin_layout Subsubsection*
+Cycles et roues
+\end_layout
+
+\begin_layout Definition
+Un cycle 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ pour 
+\begin_inset Formula $n\geq3$
+\end_inset
+
+ consiste en 
+\begin_inset Formula $n$
+\end_inset
+
+ noeuds 
+\begin_inset Formula $v_{1},v_{2},...,v_{n}$
+\end_inset
+
+ et en les arêtes 
+\begin_inset Formula $\{v_{1},v_{2}\},$
+\end_inset
+
+ 
+\begin_inset Formula $\{v_{2},v_{3}\}$
+\end_inset
+
+, ...
+ , 
+\begin_inset Formula $\{v_{n-1},v_{n}\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Une roue est un cycle auquel on a rajouté un noeud.
+ Ce noeud est relié à tous les autres noeuds.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Graphes bipartis
+\end_layout
+
+\begin_layout Definition
+Un simple graphe est biparti si V peut être partitionné en deux sous-ensembles
+ distincts, 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+et 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+, de façon à ce que chaque arête relie un noeud dans 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ et un noeud dans 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+un graphe biparti complet 
+\begin_inset Formula $K_{m,n}$
+\end_inset
+
+ est un graphe qui a ses noeuds séparés en en deux sous-ensembles 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ de taille m et 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ de taille n, de telle sorte qu'il y ait une arête de chaque noeud de 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ vers chaque noeud de 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Graphes construits à partir d'autres
+\end_layout
+
+\begin_layout Definition
+Un sous-graphe d'un graphe 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ est un graphe 
+\begin_inset Formula $(W,F)$
+\end_inset
+
+ où 
+\begin_inset Formula $W\subset V$
+\end_inset
+
+ et 
+\begin_inset Formula $F\subset E$
+\end_inset
+
+.
+ Un sous-graphe 
+\begin_inset Formula $H$
+\end_inset
+
+ de 
+\begin_inset Formula $G$
+\end_inset
+
+ est un sous-graphe propre si 
+\begin_inset Formula $H\neq G$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Soit 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ un graphe simple.
+ Le sous-graphe induit par un sous-ensemble W de V est le graphe 
+\begin_inset Formula $(W,F)$
+\end_inset
+
+, où l'ensemble des arêtes F ne contient une arête dans E que si les deux
+ extrémités se trouvent dans W.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+L'union de deux graphes simples 
+\begin_inset Formula $G_{1}=(V_{1},E_{1})$
+\end_inset
+
+ et 
+\begin_inset Formula $G_{2}=(V_{2},E_{2})$
+\end_inset
+
+ est le graphe simple avec comme ensemble de noeuds 
+\begin_inset Formula $V_{1}\cup V_{2}$
+\end_inset
+
+ et comme ensemble d'arêtes 
+\begin_inset Formula $E_{1}\cup E_{2}$
+\end_inset
+
+.
+ L'union des deux graphes s'écrit 
+\begin_inset Formula $G_{1}\cup G_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Représentation et isomorphisme de graphes
+\end_layout
+
+\begin_layout Subsection
+Liste d'adjacence
+\end_layout
+
+\begin_layout Definition
+Une liste d'adjacence peut être utilisée pour représenter un graphe sans
+ arêtes multiples en spécifiant quels noeuds sont adjacents à chaque noeud
+ du graphe.
+\end_layout
+
+\begin_layout Subsection
+Matrice d'adjacence
+\end_layout
+
+\begin_layout Definition
+Soit 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ un graphe simple où 
+\begin_inset Formula $|V|=n$
+\end_inset
+
+.
+ La matrice d'adjacence 
+\begin_inset Formula $A_{G}$
+\end_inset
+
+ de G est la matrice binaire 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ où, si 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ et 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ sont adjacents, alors 
+\begin_inset Formula $a_{ij}=1$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ et 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ ne sont sont pas adjacents, alors 
+\begin_inset Formula $a_{ij}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Une matrice d'adjacence peut aussi être utilisée pour représenter des multigraph
+es par exemple.
+ Elle ne sera alors plus binaire, et 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ représentera le nombre d'arêtes entre les noeuds 
+\begin_inset Formula $i$
+\end_inset
+
+ et 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Dans le cas de graphes dirigés, la matrice ne sera plus symétrique.
+\end_layout
+
+\begin_layout Subsection
+Matrice d'incidence
+\end_layout
+
+\begin_layout Definition
+Soit 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ un graphe non-dirigé avec n noeuds et m arêtes.
+ La matrice d'incidence est la matrice 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ où 
+\begin_inset Formula $m_{ij}=1$
+\end_inset
+
+ si l'arête 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ est incidente avec 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, et 0 sinon.
+\end_layout
+
+\begin_layout Subsection
+Graphes isomorphes
+\end_layout
+
+\begin_layout Definition
+Les graphes simples 
+\begin_inset Formula $G_{1}=(V_{1},E_{1})$
+\end_inset
+
+ et 
+\begin_inset Formula $G_{2}=(V_{2},E_{2})$
+\end_inset
+
+ sont isomorphes s'il y a une bijection 
+\begin_inset Formula $f$
+\end_inset
+
+ de 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ à 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ avec la propriété que 
+\begin_inset Formula $a$
+\end_inset
+
+ et 
+\begin_inset Formula $b$
+\end_inset
+
+ sont adjacents dans 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ si et seulement si 
+\begin_inset Formula $f(a)$
+\end_inset
+
+ et
+\begin_inset Formula $f(b)$
+\end_inset
+
+ sont adjacents dans 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+, pour tout 
+\begin_inset Formula $a,b$
+\end_inset
+
+ dans 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Connectivité
+\end_layout
+
+\begin_layout Subsection
+Chemins
+\end_layout
+
+\begin_layout Definition
+Un chemin est une séquence d'arêtes qui commence au noeud d'un graphe et
+ qui voyage de noeud en noeud en suivant les arêtes du graphe.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Soit n un entier non-négatif et G un graphe non-dirigé.
+ Un chemin de longueur n de u à v dans G est une séquence de n arêtes de
+ G pour lesquelles il existe une séquence 
+\begin_inset Formula $x_{0}=u,x_{1},...,x_{n-1}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{n}=v$
+\end_inset
+
+ de noeuds telle que 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ a pour 
+\begin_inset Formula $i=1,...,n$
+\end_inset
+
+, les extrémités 
+\begin_inset Formula $x_{i-1}$
+\end_inset
+
+ et 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Quand le graphe est simple, on peut décrire ce chemin simplement en citant
+ les noeuds par lesquels il passe.
+\end_layout
+
+\begin_layout Standard
+Le chemin est un circuit si 
+\begin_inset Formula $u=v$
+\end_inset
+
+ et qu'il a une longueur non-nulle.
+\end_layout
+
+\begin_layout Standard
+Un chemin est simple s'il ne passe pas plus d'une fois par chaque arête.
 \end_layout
 
 \end_body
