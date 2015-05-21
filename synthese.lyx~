@@ -5556,7 +5556,6 @@ G=\alpha P+(1-\alpha)\frac{ee^{T}}{n}
 .
  Cela permet de ne pas rester coincé dans un noeud absorbant et de traiter
  les composantes séparées.
- Plus de détails sont disponibles dans les slides.
 \end_layout
 
 \end_body

@@ -4090,28 +4090,13 @@ On obtient donc une équation
 a_{1} & =Ca_{0}+f_{1}\\
 a_{2} & =Ca_{1}+f_{2}=C^{2}a_{0}+Cf_{1}+f_{2}\\
 a_{3} & =Ca_{2}+f_{3}=C^{3}a_{0}+C^{2}f_{1}+Cf_{2}+f_{3}\\
-\vdots
+\\
 \end{cases}
 \]
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-On peut donc inférer que 
-\begin_inset Formula 
-\[
-a_{n}=C^{n}a_{0}+\sum_{k=1}^{n}C^{k-1}f_{n-k+1}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+ 
 \begin_inset Newpage newpage
 \end_inset
 
@@ -5537,26 +5522,6 @@ La distribution stationnaire (non-vue au cours) nous dit que
 
 \begin_layout Subsection
 Ajustements
-\end_layout
-
-\begin_layout Standard
-En autorisant le saut aléatoire sur n'importe quel noeud dans le graphe,
- cela donne
-\begin_inset Formula 
-\[
-G=\alpha P+(1-\alpha)\frac{ee^{T}}{n}
-\]
-
-\end_inset
-
- où e est un vecteur colonne rempli de 1 et 
-\begin_inset Formula $0\le\alpha\le1$
-\end_inset
-
-.
- Cela permet de ne pas rester coincé dans un noeud absorbant et de traiter
- les composantes séparées.
- Plus de détails sont disponibles dans les slides.
 \end_layout
 
 \end_body
