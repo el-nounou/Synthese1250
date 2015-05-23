@@ -85,7 +85,7 @@ SINF1250 - Mathématiques pour l'informatique
 \end_layout
 
 \begin_layout Author
-Jerome Thiry, Florian Felten
+Jerome Thiry
 \end_layout
 
 \begin_layout Standard
@@ -4514,12 +4514,8 @@ Une relation de récurrence linéaire homogène de degré
 \end_layout
 
 \begin_layout Standard
-Elle est 
-\series bold
-linéaire
-\series default
- car la partie droite de l'équation est une somme des termes précédents
- de la séquence, chacun étant multiplié par une fonction de 
+Elle est linéaire car la partie droite de l'équation est une somme des termes
+ précédents de la séquence, chacun étant multiplié par une fonction de 
 \begin_inset Formula $n$
 \end_inset
 
@@ -4527,11 +4523,8 @@ linéaire
 \end_layout
 
 \begin_layout Standard
-Elle est 
-\series bold
-homogène
-\series default
- car il n'y a pas de termes qui ne sont pas des multiples de a.
+Elle est homogène car il n'y a pas de termes qui ne sont pas des multiples
+ de a.
  Son degré est k car elle est exprimée en fonction des k termes précédents
  de la séquence.
 \end_layout
@@ -4543,34 +4536,17 @@ homogène
  est une relation de récurrence linéaire homogène de degré 2.
 \end_layout
 
-\begin_layout Paragraph*
-Résoudre une relation de récurrence homogène avec des coefficients constants:
-\end_layout
-
 \begin_layout Enumerate
 On regarde pour des solutions du type 
 \begin_inset Formula $a_{n}=r^{n}$
 \end_inset
 
 , où r est constant.
- Notons que 
-\begin_inset Formula $a_{n}=r^{n}$
-\end_inset
-
- est solution ssi 
-\begin_inset Formula $r^{n}=c_{1}r^{n-1}+...+c_{k}r^{n-k}$
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Enumerate
-On écrit l'équation caractéristique en divisant les deux membres de l'équation
- par 
-\begin_inset Formula $r^{n-k}$
-\end_inset
-
- et en passant le membre droite à gauche.
+On écrit l'équation caractéristique grâce à des manipulations algébriques.
 \begin_inset Formula 
 \[
 r^{k}-c_{1}r^{k-1}-...-c_{k-1}r-c_{k}=0
@@ -4591,23 +4567,17 @@ La séquence
 \end_inset
 
  est solution si et seulement si 
-\begin_inset Formula $r$
+\begin_inset Formula $r^{n}$
 \end_inset
 
  est solution de l'équation caractéristique.
 \end_layout
 
 \begin_layout Enumerate
-Les solutions de l'équation caractéristique sont appelées les
-\series bold
- racines caractéristiques
-\series default
- de la relation de récurrence.
- Elles sont utilisées pour donner une 
-\series bold
-formule explicite pour toutes les solutions
-\series default
- de la relation de récurrence.
+Les solutions de l'équation caractéristique sont appelées les racines caractéris
+tiques de la relation de récurrence.
+ Elles sont utilisées pour donner une formule explicite pour toutes les
+ solutions de la relation de récurrence.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4926,103 +4896,6 @@ a_{n} & = & (\alpha_{1,0}+\alpha_{1,1}n+...+\alpha_{1,m_{1}-1}n^{m_{1}-1})\, r_{
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Box Doublebox
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Fact*
-Étapes à suivre pour résoudre une relation de récurrence linéaire homogène
-\end_layout
-
-\begin_layout Enumerate
-Poser 
-\begin_inset Formula $r^{n}=c_{1}r^{n-1}+...+c_{2}r^{n-k}$
-\end_inset
-
- en fonction du degré de 
-\begin_inset Formula $a_{n}$
-\end_inset
-
-;
-\end_layout
-
-\begin_layout Enumerate
-Diviser cette relation par 
-\begin_inset Formula $n-k$
-\end_inset
-
- et passer le membre de droite à gauche pour obtenir l'équation caractéristique:
-\begin_inset Formula 
-\[
-r^{k}-c_{1}r^{k-1}-...-c_{k}=0
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Trouver les racines
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\emph on
-Si racines différentes: 
-\emph default
-mettre 
-\begin_inset Formula $a_{n}$
-\end_inset
-
-sous forme: 
-\begin_inset Formula 
-\[
-a_{n}=\alpha_{1}r_{1}^{n}+...+\alpha_{k}r_{k}^{n}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Sinon:
-\emph default
-
-\begin_inset Formula 
-\[
-a_{n}=\alpha_{1}r_{1}^{n}+\alpha_{2}nr_{2}^{n}+...+\alpha_{k}n^{k-1}r_{k}^{n}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Trouver la valeur des constantes grâce aux conditions initiales.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Relations de récurrence linéaires non-homogènes
 \end_layout
@@ -5059,13 +4932,6 @@ La relation
  est appelée la relation de récurrence homogène associée.
 \end_layout
 
-\begin_layout Example*
-\begin_inset Formula $a_{n}=a_{n-1}+2^{n}$
-\end_inset
-
- est une relation de ce type.
-\end_layout
-
 \begin_layout Theorem
 Si 
 \begin_inset Formula $\left\{ a_{n}^{(p)}\right\} $
@@ -5086,188 +4952,12 @@ Si
  est une solution de la relation homogène associée.
 \end_layout
 
-\begin_layout Theorem
-\begin_inset Box Doublebox
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Fact*
-Étapes à suivre + exemple:
-\end_layout
-
-\begin_layout Fact*
-
-\emph on
-On cherche les solutions de 
-\begin_inset Formula $a_{n}=3a_{n-1}+2n$
-\end_inset
-
- avec 
-\begin_inset Formula $a_{1}=3$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-L'équation linéaire homogène associée est: 
-\begin_inset Formula $a_{n}=3a_{n-1}$
-\end_inset
-
-.
- Son équation caractéristique est donnée par : 
-\begin_inset Formula $r-3=0$
-\end_inset
-
-.
- La racine est 3 et donc on peut exprimer la 
-\series bold
-solution homogène
-\series default
- 
-\begin_inset Formula $a_{n}^{(h)}=\alpha3^{n}$
-\end_inset
-
-.
- En remplaçant 
-\begin_inset Formula $n$
-\end_inset
-
- par 1 on trouve 
-\begin_inset Formula $\alpha=1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-Puisque 
-\begin_inset Formula $F(n)=2n$
-\end_inset
-
- est sous forme linéaire avec 
-\begin_inset Formula $n$
-\end_inset
-
- de degré 1.
- On peut 
-\series bold
-trouver une solution particulière
-\series default
- en remplaçant 
-\begin_inset Formula $a_{n}$
-\end_inset
-
- par une fonction linéaire.
- On pose donc 
-\begin_inset Formula $p_{n}=cn+d$
-\end_inset
-
-.
- 
-\begin_inset Formula $a_{n}=3a_{n-1}+2n$
-\end_inset
-
- devient donc 
-\begin_inset Formula $cn+d=3(c(n-1)+d)+2n$
-\end_inset
-
-.
- En résolvant on trouve 
-\begin_inset Formula $c=-1$
-\end_inset
-
- et 
-\begin_inset Formula $d=-3/2$
-\end_inset
-
-.
- Donc, 
-\begin_inset Formula $a_{n}^{(p)}=-n-\frac{3}{2}$
-\end_inset
-
- est solution particulière.
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-On forme la solution générale en additionnant les deux solutions: 
-\begin_inset Formula $a_{n}=a_{n}^{(p)}+a_{n}^{(h)}=-n-\frac{3}{2}+\alpha3^{n}$
-\end_inset
-
-.
- En 
-\series bold
-remplaçant 
-\series default
-n par 1 (
-\series bold
-condition initiale
-\series default
-), on trouve: 
-\begin_inset Formula $3=-1-\frac{3}{2}+3\alpha$
-\end_inset
-
- .
- Et donc 
-\begin_inset Formula $\alpha=11/6$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\emph on
-La 
-\series bold
-solution générale
-\series default
- est donc 
-\begin_inset Formula $a_{n}=a_{n}^{(p)}+a_{n}^{(h)}=-n-\frac{3}{2}+\frac{11}{6}(3^{n})$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Inclusion-Exclusion
 \end_layout
 
 \begin_layout Subsection*
 Cas de 3 ensembles finis
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Graphics
-	filename ensembles.png
-	scale 65
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5333,7 +5023,7 @@ C=\begin{pmatrix}c_{1} & c_{2} & c_{3} & \cdots & c_{k-1} & c_{k}\\
 
 \begin_layout Standard
 On obtient donc une équation 
-\begin_inset Formula $a_{n}=Ca_{n-1}+f_{n}$
+\begin_inset Formula $a_{n}=Ca_{n-i}+f_{n}$
 \end_inset
 
 .

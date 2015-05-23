@@ -75,6 +75,7 @@ End
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1436303372 "florian,,," 
 \end_header
 
 \begin_body
@@ -84,7 +85,7 @@ SINF1250 - Mathématiques pour l'informatique
 \end_layout
 
 \begin_layout Author
-Jerome Thiry
+Jerome Thiry, Florian Felten
 \end_layout
 
 \begin_layout Standard
@@ -747,6 +748,12 @@ existentiel :
 \begin_layout Standard
 Les fonctions propositionnelles sont une généralisation des propositions.
  Elles contiennent des variables et des prédicats.
+ Les prédicats peuvent être compris comme une propriété à satisfaire par
+ les objets du domaine pour avoir le résultat 
+\emph on
+True
+\emph default
+.
  Ces variables peuvent être remplacées par des éléments de leur domaine.
 \end_layout
 
@@ -853,7 +860,10 @@ Les deux quantificateurs les plus importants sont le quantificateur universel
 \end_layout
 
 \begin_layout Standard
-On dit que les quantificateurs lient la variable x dans ces expressions.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1317,6 +1327,35 @@ Règles d'inférence
 \begin_layout Standard
 Un argument est divisé en deux parties : les prémisses qui se placent au-dessus
  de la ligne, et la conclusion qui se place en-dessous.
+ Le symbole 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\backslash
+therefore
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang french
+ signifie donc, par conséquent.
 \end_layout
 
 \begin_layout Standard
@@ -1401,12 +1440,48 @@ Un argument est divisé en deux parties : les prémisses qui se placent au-dessu
 
 \end_layout
 
+\begin_layout Standard
+On lira ici:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Prémisse:
+\emph on
+ Socrate est un homme
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Conclusion:
+\emph on
+ Donc, Socrate est mortel 
+\end_layout
+
 \begin_layout Subsection
 Règles concernant la logique propositionnelle
 \end_layout
 
 \begin_layout Subsubsection*
 Modus Ponens
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Ponens 
+\emph default
+vient du latin, 
+\begin_inset Quotes eld
+\end_inset
+
+poser
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Ce qu'on veut signifier ici est l'implication simple.
+ A implique B, si A a lieu alors B est une conséquence directe.
 \end_layout
 
 \begin_layout Standard
@@ -1504,6 +1579,12 @@ Modus Tollens
 \end_layout
 
 \begin_layout Standard
+Ici on raisonne inversément.
+ Non-B implique non-A.
+ L'absence de conséquence implique l'absence de la cause.
+\end_layout
+
+\begin_layout Standard
 \noindent
 \align center
 \begin_inset Tabular
@@ -1593,8 +1674,99 @@ Cet argument correspond à la tautologie
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Exemple: 
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+A = 
+\begin_inset Quotes eld
+\end_inset
+
+Il pleut dehors.
+\begin_inset Quotes erd
+\end_inset
+
+ et B = 
+\begin_inset Quotes eld
+\end_inset
+
+Le sol est mouillé.
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+On a donc: 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+S'il pleut dehors le sol est mouillé.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Modus Tollens donnerait: 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Le sol n'est pas mouillé, donc il ne pleut pas.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection*
 Syllogisme hypothétique
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Le syllogisme est un raisonnement logique à deux propositions (également
+ appelées prémisses) conduisant à une conclusion.
+ (Wikipedia)
+\end_layout
+
+\begin_layout Standard
+Petit exemple: Les singes mangent des bananes.
+ Je mange une banane.
+ Je suis un singe.
 \end_layout
 
 \begin_layout Standard
@@ -1685,6 +1857,109 @@ Cet argument correspond à la tautologie
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Exemple: 
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+A = 
+\begin_inset Quotes eld
+\end_inset
+
+Il pleut dehors.
+\begin_inset Quotes erd
+\end_inset
+
+ , B = 
+\begin_inset Quotes eld
+\end_inset
+
+Je vais étudier math
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph default
+et C =
+\emph on
+ 
+\emph default
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Je vais avoir 20
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+On a: 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+S'il pleut dehors, je vais étudier.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph default
+et 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Si j'étudie, j'aurai 20.
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Le syllogisme hypothétique donne donc: 
+\emph on
+
+\begin_inset Quotes erd
+\end_inset
+
+S'il pleut dehors, j'aurai 20.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1779,6 +2054,101 @@ Cet argument correspond à la tautologie
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Exemple: 
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+B = 
+\begin_inset Quotes eld
+\end_inset
+
+Je vais étudier math.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph default
+et C =
+\emph on
+ 
+\emph default
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Je vais étudier micro.
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+On a: 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+J'étudie math ou micro.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph default
+et 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Je n'étudie pas math.
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Le syllogisme disjonctif donne donc: 
+\emph on
+
+\begin_inset Quotes erd
+\end_inset
+
+J'étudie micro.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -2192,6 +2562,40 @@ Instanciation universelle
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Exemple:
+\end_layout
+
+\begin_layout Plain Layout
+Tous les chiens ont des poils.
+ Fido est un chien (il appartient à 
+\begin_inset Formula $x$
+\end_inset
+
+) donc, Fido a des poils.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection*
 Généralisation universelle
 \end_layout
@@ -2482,6 +2886,7 @@ Les mintermes de p et q sont des conjonctions où les variables apparaissent
 \end_inset
 
 .
+ (Min car ce sont des conjonctions, 1 et 0 donne 0 on a donc le minimum).
 \end_layout
 
 \begin_deeper
@@ -2568,7 +2973,11 @@ Une formule F en logique de premier ordre est dite dans sa forme normale
 \begin_inset Formula $M$
 \end_inset
 
- est une formule ne contenant aucun quantificateur.
+ est une formule ne contenant 
+\series bold
+aucun quantificateur
+\series default
+.
  
 \begin_inset Formula $(Q_{1}x_{1})...(Q_{n}x_{n})$
 \end_inset
@@ -2609,9 +3018,17 @@ Les théorèmes sont souvent sous la forme
 \end_layout
 
 \begin_layout Standard
-On assume que p est vrai.
+On assume que 
+\begin_inset Formula $P$
+\end_inset
+
+ est vrai.
  On utilise les règles d'inférences, les axiomes et les équivalences logiques
- afin de montrer que q est obligatoirement vrai.
+ afin de montrer que 
+\begin_inset Formula $Q$
+\end_inset
+
+ est obligatoirement vrai.
 \end_layout
 
 \begin_layout Example*
@@ -2718,7 +3135,7 @@ Prouver que si
 \end_inset
 
 pour 
-\begin_inset Formula $j=3k=1$
+\begin_inset Formula $j=3k+1$
 \end_inset
 
 .
@@ -2736,6 +3153,50 @@ pour
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+On pouvait aussi reprendre l'exemple de la preuve directe et prouver que
+ 
+\begin_inset Quotes eld
+\end_inset
+
+si 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ est un entier pair, alors 
+\begin_inset Formula $n$
+\end_inset
+
+ est pair
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Cela s'avère ennuyant vu les racines etc.
+\end_layout
+
+\begin_layout Standard
+On peut supposer que 
+\begin_inset Formula $n$
+\end_inset
+
+ est impair, et on déduit que 
+\begin_inset Formula $n{}^{2}$
+\end_inset
+
+ est impair (voir preuve directe).
+ En appliquant la contraposition on retombe sur si 
+\begin_inset Formula $n{}^{2}$
+\end_inset
+
+ est pair, 
+\begin_inset Formula $n$
+\end_inset
+
+ est pair.
+ Penser au Modus Tollens par rapport au Modus Ponens, c'est la même logique.
 \end_layout
 
 \begin_layout Subsection
@@ -2775,7 +3236,34 @@ Prouver que si l'on choisit 22 jours dans un calendrier, au moins 4 d'entre
  Comme une semaine contient 7 jours, on n'aurait sélectionné seulement 21
  jours.
  Cela contredit donc le fait que l'on ait choisi 22 jours.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Autre exemple:
+\series default
+ Démontrer que zéro n'a pas d'inverse: Si zéro a un inverse, il existe un
+ réel a tel que: 
+\begin_inset Formula $a$
+\end_inset
+
+
+\begin_inset Formula $\times$
+\end_inset
+
+
+\begin_inset Formula $0$
+\end_inset
+
  
+\begin_inset Formula $=1$
+\end_inset
+
+.
+ Zéro étant absorbant pour la multiplication, on aboutit donc à l'égalité
+ 0 = 1, qui est une absurdité.
+ Donc zéro n'a pas d'inverse.
 \begin_inset Newpage newpage
 \end_inset
 
@@ -2991,7 +3479,7 @@ Si
 \end_inset
 
  sont des ensembles finis, alors le nombre d'éléments du produit cartésiens
- de ces ensembles et le produit du nombre d'éléments de chaque ensemble.
+ de ces ensembles est le produit du nombre d'éléments de chaque ensemble.
 \end_layout
 
 \begin_layout Enumerate
@@ -3021,7 +3509,11 @@ Une procédure peut être exécutée de une de
 \begin_inset Formula $n_{1}$
 \end_inset
 
- façons, ou de une de 
+ façons, 
+\series bold
+ou
+\series default
+ de une de 
 \begin_inset Formula $n_{2}$
 \end_inset
 
@@ -3107,6 +3599,67 @@ On écrit
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Exemple.
+ 
+\series default
+Compter le nombre de bytes commençant par 1 et terminant par 00.
+\end_layout
+
+\begin_layout Enumerate
+Nombre de byte
+\change_inserted -1436303372 1432312775
+s
+\change_unchanged
+ commençant par 1: 
+\begin_inset Formula $2{}^{7}$
+\end_inset
+
+
+\change_inserted -1436303372 1432312723
+ 
+\change_unchanged
+(un bit fixe et les autres changeants);
+\change_inserted -1436303372 1432312761
+
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1436303372 1432312810
+Nombre de bytes terminants par 00: 
+\begin_inset Formula $2^{6};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1436303372 1432312844
+Nombre de bytes communs: 
+\begin_inset Formula $2^{5}$
+\end_inset
+
+
+\change_unchanged
+ (par la règle du produit puisqu'on a 5 slots à remplir)
+\change_inserted -1436303372 1432312844
+;
+\end_layout
+
+\begin_layout Enumerate
+
+\change_inserted -1436303372 1432312858
+Réponse finale: 128 + 64 - 32 = 160
+\change_unchanged
+.
+\change_inserted -1436303372 1432312858
+
+\end_layout
+
 \begin_layout Subsection
 Règle de la division
 \end_layout
@@ -3156,6 +3709,58 @@ En termes d'ensembles, on dit : si l'ensemble fini
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Exemple.
+
+\emph on
+ 
+\series default
+\emph default
+De combien de manières différentes peut-on asseoir 4 personnes autour d'une
+ table circulaire ? 
+\emph on
+(On considère 2 assises égales si on a les mêmes voisins à gauche et à droite)
+\end_layout
+
+\begin_layout Itemize
+On peut arbitrairement sélectionner un siège de la table et l'appeler siège
+ 1.
+ On nomme les autres sièges dans l'ordre des aiguilles d'une montre.
+ 
+\end_layout
+
+\begin_layout Itemize
+Il y a 4 façons d'asseoir la première personne au siège 1 (règle de la somme),
+ 3 au siège 2, etc.
+ Donc, par la règle du produit il y a 
+\begin_inset Formula $4!$
+\end_inset
+
+ façons de placer les personnes à table.
+ Cependant, chacun des quatres choix pour le siège 1 amène au même arrangement
+ (imaginons que chacun bouge à la chaise de droite le résultat serait le
+ même).
+ Puisqu'il y a 4 manières de choisir le siège 1, par la règle de division,
+ il y a 
+\begin_inset Formula $24/4=6$
+\end_inset
+
+ manières d'arranger les personnes autour de la table.
+ 
+\end_layout
+
+\begin_layout Subsection
+Arbres
+\end_layout
+
+\begin_layout Standard
+Nous pouvons résoudre de nombreux problèmes de dénombrement en représentant
+ des arbres où une branche représente un choix possible et une feuille un
+ résultat possible.
+\end_layout
+
 \begin_layout Section
 Principe du nid de pigeons
 \end_layout
@@ -3190,7 +3795,14 @@ Permutations
 \end_layout
 
 \begin_layout Definition
-Une permutation d'un ensemble d'objets distincts est un arrangement ordonné
+Une permutation d'un ensemble d'objets 
+\series bold
+distincts
+\series default
+ est un arrangement 
+\series bold
+ordonné
+\series default
  de ces objets.
  Un arrangement ordonné de 
 \begin_inset Formula $r$
@@ -3204,7 +3816,7 @@ r-permutation.
 \begin_layout Notation*
 Le nombre de r-permutations d'un ensemble constitué de n éléments se note
  
-\begin_inset Formula $P(r,n)$
+\begin_inset Formula $P(n,r)$
 \end_inset
 
 .
@@ -3223,7 +3835,7 @@ Si
 \begin_inset Formula $1\leq r\leq n$
 \end_inset
 
-, alors il y a 
+, alors en appliquant la règle du produit, il y a 
 \begin_inset Formula $P(n,r)=n.(n-1).(n-2)...(n-r+1)$
 \end_inset
 
@@ -3232,6 +3844,34 @@ Si
 \end_inset
 
  éléments distincts.
+\end_layout
+
+\begin_layout Proof
+Pour choisir le premier élément parmi 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments, on a 
+\begin_inset Formula $n$
+\end_inset
+
+ possibilités.
+ Pour le deuxième, il nous reste 
+\begin_inset Formula $n-1$
+\end_inset
+
+ possibilités etc.
+ Au 
+\begin_inset Formula $n^{ème}$
+\end_inset
+
+ élément, on aura 
+\begin_inset Formula $n-r+1$
+\end_inset
+
+ possibilités.
+ En assemblant via la règle du produit on obtient la formule du Théorème
+ 22.
 \end_layout
 
 \begin_layout Remark*
@@ -3261,12 +3901,65 @@ Si
 .
 \end_layout
 
+\begin_layout Example*
+Si 
+\begin_inset Formula $S=\{1,2,3\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+L'arrangement ordonné 
+\begin_inset Formula $3,1,2$
+\end_inset
+
+ est une permutation de 
+\begin_inset Formula $S$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+L'arrangement ordonné 
+\begin_inset Formula $3,1$
+\end_inset
+
+ est une 2-permutation de 
+\begin_inset Formula $S$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Il y a 6 2-permutations dans 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 1,2; 1,3; 2,1; 2,3; 3,1; et 3,2.
+\end_layout
+
+\begin_layout Example*
+De combien de façons peut-on sélectionner un premier, un deuxième et un
+ troisième dans une compétition de 100 membres?
+\begin_inset Formula $\Rightarrow P(100,3)=100\times99\times98$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 Combinaisons
 \end_layout
 
 \begin_layout Definition
-Une r-combinaison d'éléments dans un ensemble est une sélection non-ordonnée
+Une r-combinaison d'éléments dans un ensemble est une sélection
+\series bold
+ non-ordonnée
+\series default
  de r éléments de l'ensemble.
  Une r-combinaison d'un ensemble est donc un sous-ensemble de taille r de
  cet ensemble.
@@ -3288,6 +3981,35 @@ r
 , appelé coefficient binomial.
 \end_layout
 
+\begin_layout Example*
+Soit 
+\begin_inset Formula $S=\{1,2,3\}$
+\end_inset
+
+, une combinaison 
+\begin_inset Formula $C(3,2)$
+\end_inset
+
+ de cet ensemble serait 
+\begin_inset Formula $\{1,2\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+\begin_inset Formula $\{2,1\}$
+\end_inset
+
+ est considéré comme étant la même combinaison que 
+\begin_inset Formula $\{1,2\}$
+\end_inset
+
+.
+ Contrairement aux permutations, l'ordre n'a pas d'importance dans les combinais
+ons.
+\end_layout
+
 \begin_layout Theorem
 Le nombre de r-combinaisons d'un ensemble avec 
 \begin_inset Formula $n$
@@ -3302,6 +4024,35 @@ Le nombre de r-combinaisons d'un ensemble avec
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Proof
+Par la règle du produit, 
+\begin_inset Formula $P(n,r)=C(n,r)\times P(r,r)$
+\end_inset
+
+ (on divise le problème en deux: 1) trouver le nombre de combinaisons où
+ l'on peut sélectionner 
+\begin_inset Formula $r$
+\end_inset
+
+ éléments parmi 
+\begin_inset Formula $n$
+\end_inset
+
+ 2) permuter chacune de ces combinaisons pour trouver le nombre de permutations
+ par combinaison) et donc:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+C(n,r)=\frac{P(n,r)}{P(r,r)}=\frac{\frac{n!}{(n-r)!}}{\frac{r!}{1!}}=\frac{n!}{(n-r)!r!}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Corollary
@@ -3329,8 +4080,8 @@ Preuves combinatoires
 \end_layout
 
 \begin_layout Definition
-Une preuve combinatoire d'une identité qui est une preuve qui utilise une
- des deux méthodes suivantes.
+Une preuve combinatoire d'une identité est une preuve qui utilise une des
+ deux méthodes suivantes.
 \end_layout
 
 \begin_layout Enumerate
@@ -3403,6 +4154,50 @@ Théorème binomial.
 
 \end_layout
 
+\begin_layout Example*
+Quel est le coefficient de 
+\begin_inset Formula $x^{12}y^{13}$
+\end_inset
+
+ dans le développemet de 
+\begin_inset Formula $(2x-3y)^{25}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Par le théorème binomial: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $(2x-3y)^{25}=\sum_{j=0}^{25}C(25,j)(2x)^{25-j}(-3y)^{j}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Avec 
+\begin_inset Formula $j=13$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $C(25,13)(2x)^{12}(-3y)^{13}=\frac{25!}{13!12!}2^{12}(-3)^{13}xy$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Corollary
 Avec 
@@ -3440,6 +4235,25 @@ Le nombre de r-permutations d'un ensemble de
 .
 \end_layout
 
+\begin_layout Theorem
+
+\emph on
+Il y a 
+\begin_inset Formula $n$
+\end_inset
+
+ façons de sélectionner un élément de l'ensemble pour toutes les 
+\begin_inset Formula $r$
+\end_inset
+
+ positions de la 
+\begin_inset Formula $r$
+\end_inset
+
+-permutation quand la répétition est accordée.
+ 
+\end_layout
+
 \begin_layout Subsection
 Combinaisons avec répétition
 \end_layout
@@ -3454,6 +4268,72 @@ Le nombre de r-combinaisons d'un ensemble de
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Example*
+Nous avons 
+\begin_inset Formula $n$
+\end_inset
+
+ cases et 
+\begin_inset Formula $r$
+\end_inset
+
+ boules identiques.
+ On doit placer les 
+\begin_inset Formula $r$
+\end_inset
+
+ boules dans les cases.
+ Combien de répartition sont possibles ?
+\end_layout
+
+\begin_layout Example*
+Représentons les séparations entre les cases par | et les boules par 
+\begin_inset Formula $O$
+\end_inset
+
+.
+ Prenons l'exemple où l'on doit placer 5 boules dans 3 cases, on peut schématise
+r comme suit:
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula 
+\[
+OO|O|OO
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+La résolution du problème revient donc à 
+\series bold
+dessiner 
+\series default
+
+\begin_inset Formula $r+n-1=7$
+\end_inset
+
+ éléments avec obligatoirement 5 boules, les séparations étant placées automatiq
+uement si on choisit de ne pas placer de boule.
+ Le problème revient donc à placer/choisir 
+\begin_inset Formula $r$
+\end_inset
+
+ éléments parmis 
+\begin_inset Formula $r+n-1$
+\end_inset
+
+ choix, on peut donc trouver 
+\begin_inset Formula $C(n+r-1,r)=C(7,5)$
+\end_inset
+
+ manières différentes de le faire.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -3489,7 +4369,74 @@ objets indistinguables de type k, est
 
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Example*
+Combien de mots peuvent être faits en permutant les lettres du mots 
+\emph on
+SUCCESS
+\emph default
+?
+\end_layout
+
+\begin_layout Example*
+Puisque certaines lettres sont les mêmes, il ne s'agit pas ici d'une simple
+ permutation (si on inverse le premier et le dernier 
+\emph on
+S
+\emph default
+, on obtient le même mot et donc ce n'est pas comptabilisé).
+ Premièrement, notons qu'il y a 3 
+\emph on
+S 
+\emph default
+(indistinguables) qui peuvent être placés dans 7 positions.
+ On a donc 
+\begin_inset Formula $C(7,3)$
+\end_inset
+
+ façons de faire ceci.
+ Ensuite, il y a 2 
+\emph on
+C
+\emph default
+ et il nous reste 4 places à occuper.
+ Nous avons 
+\begin_inset Formula $C(4,2)$
+\end_inset
+
+ manières de placer les 
+\emph on
+C.
+
+\emph default
+ Il reste 1 
+\emph on
+E
+\emph default
+ pour 2 places donc 
+\begin_inset Formula $C(2,1)$
+\end_inset
+
+ et finalement 
+\begin_inset Formula $C(1,1)$
+\end_inset
+
+ pour le 
+\emph on
+U
+\emph default
+.
+ Par la règle du produit, on trouve: 
+\begin_inset Formula 
+\[
+C(7,3)\times C(4,2)\times C(2,1)\times C(1,1)=420
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -3567,8 +4514,12 @@ Une relation de récurrence linéaire homogène de degré
 \end_layout
 
 \begin_layout Standard
-Elle est linéaire car la partie droite de l'équation est une somme des termes
- précédents de la séquence, chacun étant multiplié par une fonction de 
+Elle est 
+\series bold
+linéaire
+\series default
+ car la partie droite de l'équation est une somme des termes précédents
+ de la séquence, chacun étant multiplié par une fonction de 
 \begin_inset Formula $n$
 \end_inset
 
@@ -3576,8 +4527,11 @@ Elle est linéaire car la partie droite de l'équation est une somme des termes
 \end_layout
 
 \begin_layout Standard
-Elle est homogène car il n'y a pas de termes qui ne sont pas des multiples
- de a.
+Elle est 
+\series bold
+homogène
+\series default
+ car il n'y a pas de termes qui ne sont pas des multiples de a.
  Son degré est k car elle est exprimée en fonction des k termes précédents
  de la séquence.
 \end_layout
@@ -3589,19 +4543,37 @@ Elle est homogène car il n'y a pas de termes qui ne sont pas des multiples
  est une relation de récurrence linéaire homogène de degré 2.
 \end_layout
 
+\begin_layout Paragraph*
+Résoudre une relation de récurrence homogène avec des coefficients constants:
+\end_layout
+
 \begin_layout Enumerate
 On regarde pour des solutions du type 
 \begin_inset Formula $a_{n}=r^{n}$
 \end_inset
 
 , où r est constant.
+ Notons que 
+\begin_inset Formula $a_{n}=r^{n}$
+\end_inset
+
+ est solution ssi 
+\begin_inset Formula $r^{n}=c_{1}r^{n-1}+...+c_{k}r^{n-k}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-On écrit l'équation caractéristique grâce à des manipulations algébriques.
+On écrit l'équation caractéristique en divisant les deux membres de l'équation
+ par 
+\begin_inset Formula $r^{n-k}$
+\end_inset
+
+ et en passant le membre droite à gauche.
 \begin_inset Formula 
 \[
-r^{k}-c_{1}r^{k-1}-...-c_{k-1}r-c_{k}
+r^{k}-c_{1}r^{k-1}-...-c_{k-1}r-c_{k}=0
 \]
 
 \end_inset
@@ -3619,17 +4591,23 @@ La séquence
 \end_inset
 
  est solution si et seulement si 
-\begin_inset Formula $r^{n}$
+\begin_inset Formula $r$
 \end_inset
 
  est solution de l'équation caractéristique.
 \end_layout
 
 \begin_layout Enumerate
-Les solutions de l'équation caractéristique sont appelées les racines caractéris
-tiques de la relation de récurrence.
- Elles sont utilisées pour donner une formule explicite pour toutes les
- solutions de la relation de récurrence.
+Les solutions de l'équation caractéristique sont appelées les
+\series bold
+ racines caractéristiques
+\series default
+ de la relation de récurrence.
+ Elles sont utilisées pour donner une 
+\series bold
+formule explicite pour toutes les solutions
+\series default
+ de la relation de récurrence.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -3779,7 +4757,7 @@ Soient
 \end_inset
 
  si et seulement si 
-\begin_inset Formula $a_{n}=\alpha_{1}r_{0}^{n}+\alpha_{2}nr_{0}^{n}$
+\begin_inset Formula $a_{n}=\alpha_{1}r_{0}^{n}+\alpha_{2}\mathbf{n}r_{0}^{n}$
 \end_inset
 
  pour 
@@ -3948,6 +4926,103 @@ a_{n} & = & (\alpha_{1,0}+\alpha_{1,1}n+...+\alpha_{1,m_{1}-1}n^{m_{1}-1})\, r_{
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Fact*
+Étapes à suivre pour résoudre une relation de récurrence linéaire homogène
+\end_layout
+
+\begin_layout Enumerate
+Poser 
+\begin_inset Formula $r^{n}=c_{1}r^{n-1}+...+c_{2}r^{n-k}$
+\end_inset
+
+ en fonction du degré de 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Diviser cette relation par 
+\begin_inset Formula $n-k$
+\end_inset
+
+ et passer le membre de droite à gauche pour obtenir l'équation caractéristique:
+\begin_inset Formula 
+\[
+r^{k}-c_{1}r^{k-1}-...-c_{k}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Trouver les racines
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\emph on
+Si racines différentes: 
+\emph default
+mettre 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+sous forme: 
+\begin_inset Formula 
+\[
+a_{n}=\alpha_{1}r_{1}^{n}+...+\alpha_{k}r_{k}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Sinon:
+\emph default
+
+\begin_inset Formula 
+\[
+a_{n}=\alpha_{1}r_{1}^{n}+\alpha_{2}nr_{2}^{n}+...+\alpha_{k}n^{k-1}r_{k}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Trouver la valeur des constantes grâce aux conditions initiales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Relations de récurrence linéaires non-homogènes
 \end_layout
@@ -3984,6 +5059,13 @@ La relation
  est appelée la relation de récurrence homogène associée.
 \end_layout
 
+\begin_layout Example*
+\begin_inset Formula $a_{n}=a_{n-1}+2^{n}$
+\end_inset
+
+ est une relation de ce type.
+\end_layout
+
 \begin_layout Theorem
 Si 
 \begin_inset Formula $\left\{ a_{n}^{(p)}\right\} $
@@ -4004,12 +5086,188 @@ Si
  est une solution de la relation homogène associée.
 \end_layout
 
+\begin_layout Theorem
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Fact*
+Étapes à suivre + exemple:
+\end_layout
+
+\begin_layout Fact*
+
+\emph on
+On cherche les solutions de 
+\begin_inset Formula $a_{n}=3a_{n-1}+2n$
+\end_inset
+
+ avec 
+\begin_inset Formula $a_{1}=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+L'équation linéaire homogène associée est: 
+\begin_inset Formula $a_{n}=3a_{n-1}$
+\end_inset
+
+.
+ Son équation caractéristique est donnée par : 
+\begin_inset Formula $r-3=0$
+\end_inset
+
+.
+ La racine est 3 et donc on peut exprimer la 
+\series bold
+solution homogène
+\series default
+ 
+\begin_inset Formula $a_{n}^{(h)}=\alpha3^{n}$
+\end_inset
+
+.
+ En remplaçant 
+\begin_inset Formula $n$
+\end_inset
+
+ par 1 on trouve 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Puisque 
+\begin_inset Formula $F(n)=2n$
+\end_inset
+
+ est sous forme linéaire avec 
+\begin_inset Formula $n$
+\end_inset
+
+ de degré 1.
+ On peut 
+\series bold
+trouver une solution particulière
+\series default
+ en remplaçant 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ par une fonction linéaire.
+ On pose donc 
+\begin_inset Formula $p_{n}=cn+d$
+\end_inset
+
+.
+ 
+\begin_inset Formula $a_{n}=3a_{n-1}+2n$
+\end_inset
+
+ devient donc 
+\begin_inset Formula $cn+d=3(c(n-1)+d)+2n$
+\end_inset
+
+.
+ En résolvant on trouve 
+\begin_inset Formula $c=-1$
+\end_inset
+
+ et 
+\begin_inset Formula $d=-3/2$
+\end_inset
+
+.
+ Donc, 
+\begin_inset Formula $a_{n}^{(p)}=-n-\frac{3}{2}$
+\end_inset
+
+ est solution particulière.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+On forme la solution générale en additionnant les deux solutions: 
+\begin_inset Formula $a_{n}=a_{n}^{(p)}+a_{n}^{(h)}=-n-\frac{3}{2}+\alpha3^{n}$
+\end_inset
+
+.
+ En 
+\series bold
+remplaçant 
+\series default
+n par 1 (
+\series bold
+condition initiale
+\series default
+), on trouve: 
+\begin_inset Formula $3=-1-\frac{3}{2}+3\alpha$
+\end_inset
+
+ .
+ Et donc 
+\begin_inset Formula $\alpha=11/6$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+La 
+\series bold
+solution générale
+\series default
+ est donc 
+\begin_inset Formula $a_{n}=a_{n}^{(p)}+a_{n}^{(h)}=-n-\frac{3}{2}+\frac{11}{6}(3^{n})$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Inclusion-Exclusion
 \end_layout
 
 \begin_layout Subsection*
 Cas de 3 ensembles finis
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename ensembles.png
+	scale 65
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4090,13 +5348,28 @@ On obtient donc une équation
 a_{1} & =Ca_{0}+f_{1}\\
 a_{2} & =Ca_{1}+f_{2}=C^{2}a_{0}+Cf_{1}+f_{2}\\
 a_{3} & =Ca_{2}+f_{3}=C^{3}a_{0}+C^{2}f_{1}+Cf_{2}+f_{3}\\
-\\
+\vdots
 \end{cases}
 \]
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+On peut donc inférer que 
+\begin_inset Formula 
+\[
+a_{n}=C^{n}a_{0}+\sum_{k=1}^{n}C^{k-1}f_{n-k+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -5522,6 +6795,26 @@ La distribution stationnaire (non-vue au cours) nous dit que
 
 \begin_layout Subsection
 Ajustements
+\end_layout
+
+\begin_layout Standard
+En autorisant le saut aléatoire sur n'importe quel noeud dans le graphe,
+ cela donne
+\begin_inset Formula 
+\[
+G=\alpha P+(1-\alpha)\frac{ee^{T}}{n}
+\]
+
+\end_inset
+
+ où e est un vecteur colonne rempli de 1 et 
+\begin_inset Formula $0\le\alpha\le1$
+\end_inset
+
+.
+ Cela permet de ne pas rester coincé dans un noeud absorbant et de traiter
+ les composantes séparées.
+ Plus de détails sont disponibles dans les slides.
 \end_layout
 
 \end_body
